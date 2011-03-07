@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="fr.irstv.view_2" id="fr.irstv.view" metadata="uml2-1.0" initialized="true" zoom="1.2" scrolledY="760" tag="5" key="323030363130303620706F696E747364656675697465">
+  <children xsi:type="editmodel:ClassEditModel" name="ImageFilter" location="739,779" size="213,169" id="fr.irstv.view/ImageFilter" runTimeClassModel="getExtension(Ljava.io.File;),accept(Ljava.io.File;),getDescription(),getFileNameWithoutExtension(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="190,72">
+      <children xsi:type="editmodel:MethodEditModel" name="accept" id="fr.irstv.view/ImageFilter#accept(Ljava.io.File;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDescription" id="fr.irstv.view/ImageFilter#getDescription()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getExtension" id="fr.irstv.view/ImageFilter#getExtension(Ljava.io.File;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileNameWithoutExtension" id="fr.irstv.view/ImageFilter#getFileNameWithoutExtension(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="XMLFileNotFoundExceptionDialog" location="458,990" size="432,168" id="fr.irstv.view/XMLFileNotFoundExceptionDialog" runTimeClassModel="XMLFileNotFoundExceptionDialog(Ljava.lang.String;Ljava.awt.Component;Ljava.util.ResourceBundle;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="409,18">
+      <children xsi:type="editmodel:MethodEditModel" name="XMLFileNotFoundExceptionDialog" id="fr.irstv.view/XMLFileNotFoundExceptionDialog#XMLFileNotFoundExceptionDialog(Ljava.lang.String;Ljava.awt.Component;Ljava.util.ResourceBundle;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MenuBarView" location="50,50" size="359,1573" id="fr.irstv.view/MenuBarView" runTimeClassModel="getFileClose(),getWorkingAreaShow(),setFileClose(Ljavax.swing.JMenuItem;),vanishingPointAppClose,getScaleComboBox(),getFileOpen(),getSegmentsListShow(),setHPointsListHide(Ljavax.swing.JMenuItem;),workingArea,file,segmentsHideVanishingPointColors,setSegmentsHideVanishingPointColors(Ljavax.swing.JMenuItem;),segments,setVanishingPointShow(Ljavax.swing.JMenuItem;),vanishingPointListShow,getSegmentsHideVanishingPointColors(),setVanishingPointShowCircles(Ljavax.swing.JMenuItem;),getSegmentsHide(),segmentsListShow,getSegmentsShowVanishingPointColors(),setURLOpen(Ljavax.swing.JMenuItem;),vanishingPointHide,getVanishingPoint(),setSegments(Ljavax.swing.JMenu;),hPoints,setSegmentsHide(Ljavax.swing.JMenuItem;),getURLOpen(),segmentsListHide,getUrlOpen(),setHPointsListShow(Ljavax.swing.JMenuItem;),urlOpen,hPointsShow,hPointsHide,segmentsShow,setHPointsHide(Ljavax.swing.JMenuItem;),setHPointsShow(Ljavax.swing.JMenuItem;),setWorkingAreaShow(Ljavax.swing.JMenuItem;),setFile(Ljavax.swing.JMenu;),getHPoints(),fileOpen,vanishingPointShowCircles,workingAreaHide,vanishingPointShow,getVanishingPointHideCircles(),setSegmentsShow(Ljavax.swing.JMenuItem;),setVanishingPointHide(Ljavax.swing.JMenuItem;),setHPoints(Ljavax.swing.JMenu;),getHPointsListShow(),getWorkingArea(),hPointsListShow,setFileOpen(Ljavax.swing.JMenuItem;),setSegmentsShowVanishingPointColors(Ljavax.swing.JMenuItem;),getVanishingPointShowCircles(),getWorkingAreaHide(),scalePattern,fileClose,vanishingPointListHide,setWorkingAreaHide(Ljavax.swing.JMenuItem;),segmentsHide,setVanishingPointListShow(Ljavax.swing.JMenuItem;),vanishingPointApp,MenuBarView(Ljava.util.ResourceBundle;),getHPointsListHide(),getHPointsShow(),vanishingPoint,getSegmentsListHide(),getFile(),setWorkingArea(Ljavax.swing.JMenu;),setVanishingPoint(Ljavax.swing.JMenu;),setSegmentsListShow(Ljavax.swing.JMenuItem;),setVanishingPointHideCircles(Ljavax.swing.JMenuItem;),getVanishingPointHide(),segmentsShowVanishingPointColors,hPointsListHide,getHPointsHide(),setVanishingPointAppClose(Ljavax.swing.JMenuItem;),vanishingPointHideCircles,getSegments(),workingAreaShow,getVanishingPointListHide(),setUrlOpen(Ljavax.swing.JMenuItem;),getVanishingPointShow(),setVanishingPointApp(Ljavax.swing.JMenu;),getVanishingPointAppClose(),getVanishingPointListShow(),setScaleComboBox(Ljavax.swing.JComboBox;),setVanishingPointListHide(Ljavax.swing.JMenuItem;),getVanishingPointApp(),scaleComboBox,getSegmentsShow(),setSegmentsListHide(Ljavax.swing.JMenuItem;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="184,396">
+      <children xsi:type="editmodel:AttributeEditModel" name="file" id="fr.irstv.view/MenuBarView#file"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileClose" id="fr.irstv.view/MenuBarView#fileClose"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileOpen" id="fr.irstv.view/MenuBarView#fileOpen"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="hPoints" id="fr.irstv.view/MenuBarView#hPoints"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="hPointsListHide" id="fr.irstv.view/MenuBarView#hPointsListHide"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="hPointsListShow" id="fr.irstv.view/MenuBarView#hPointsListShow"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="segments" id="fr.irstv.view/MenuBarView#segments"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="segmentsListHide" id="fr.irstv.view/MenuBarView#segmentsListHide"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="segmentsHideVanishingPointColors" id="fr.irstv.view/MenuBarView#segmentsHideVanishingPointColors"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="segmentsListShow" id="fr.irstv.view/MenuBarView#segmentsListShow"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="segmentsShowVanishingPointColors" id="fr.irstv.view/MenuBarView#segmentsShowVanishingPointColors"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPoint" id="fr.irstv.view/MenuBarView#vanishingPoint"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPointListHide" id="fr.irstv.view/MenuBarView#vanishingPointListHide"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPointHideCircles" id="fr.irstv.view/MenuBarView#vanishingPointHideCircles"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPointListShow" id="fr.irstv.view/MenuBarView#vanishingPointListShow"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPointShowCircles" id="fr.irstv.view/MenuBarView#vanishingPointShowCircles"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPointApp" id="fr.irstv.view/MenuBarView#vanishingPointApp"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPointAppClose" id="fr.irstv.view/MenuBarView#vanishingPointAppClose"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="urlOpen" id="fr.irstv.view/MenuBarView#urlOpen"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workingAreaHide" id="fr.irstv.view/MenuBarView#workingAreaHide"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="scaleComboBox" id="fr.irstv.view/MenuBarView#scaleComboBox"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="scalePattern" id="fr.irstv.view/MenuBarView#scalePattern"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="336,1098">
+      <children xsi:type="editmodel:MethodEditModel" name="MenuBarView" id="fr.irstv.view/MenuBarView#MenuBarView(Ljava.util.ResourceBundle;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFile" id="fr.irstv.view/MenuBarView#getFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileClose" id="fr.irstv.view/MenuBarView#getFileClose()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileOpen" id="fr.irstv.view/MenuBarView#getFileOpen()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHPoints" id="fr.irstv.view/MenuBarView#getHPoints()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHPointsHide" id="fr.irstv.view/MenuBarView#getHPointsHide()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHPointsShow" id="fr.irstv.view/MenuBarView#getHPointsShow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegments" id="fr.irstv.view/MenuBarView#getSegments()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegmentsHide" id="fr.irstv.view/MenuBarView#getSegmentsHide()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegmentsHideVanishingPointColors" id="fr.irstv.view/MenuBarView#getSegmentsHideVanishingPointColors()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegmentsShow" id="fr.irstv.view/MenuBarView#getSegmentsShow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegmentsShowVanishingPointColors" id="fr.irstv.view/MenuBarView#getSegmentsShowVanishingPointColors()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPoint" id="fr.irstv.view/MenuBarView#getVanishingPoint()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointHide" id="fr.irstv.view/MenuBarView#getVanishingPointHide()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointHideCircles" id="fr.irstv.view/MenuBarView#getVanishingPointHideCircles()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointShow" id="fr.irstv.view/MenuBarView#getVanishingPointShow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointShowCircles" id="fr.irstv.view/MenuBarView#getVanishingPointShowCircles()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFile" id="fr.irstv.view/MenuBarView#setFile(Ljavax.swing.JMenu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileClose" id="fr.irstv.view/MenuBarView#setFileClose(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileOpen" id="fr.irstv.view/MenuBarView#setFileOpen(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setHPoints" id="fr.irstv.view/MenuBarView#setHPoints(Ljavax.swing.JMenu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setHPointsHide" id="fr.irstv.view/MenuBarView#setHPointsHide(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setHPointsShow" id="fr.irstv.view/MenuBarView#setHPointsShow(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegments" id="fr.irstv.view/MenuBarView#setSegments(Ljavax.swing.JMenu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegmentsHide" id="fr.irstv.view/MenuBarView#setSegmentsHide(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegmentsHideVanishingPointColors" id="fr.irstv.view/MenuBarView#setSegmentsHideVanishingPointColors(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegmentsShow" id="fr.irstv.view/MenuBarView#setSegmentsShow(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegmentsShowVanishingPointColors" id="fr.irstv.view/MenuBarView#setSegmentsShowVanishingPointColors(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPoint" id="fr.irstv.view/MenuBarView#setVanishingPoint(Ljavax.swing.JMenu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointHide" id="fr.irstv.view/MenuBarView#setVanishingPointHide(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointHideCircles" id="fr.irstv.view/MenuBarView#setVanishingPointHideCircles(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointShow" id="fr.irstv.view/MenuBarView#setVanishingPointShow(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointShowCircles" id="fr.irstv.view/MenuBarView#setVanishingPointShowCircles(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointAppClose" id="fr.irstv.view/MenuBarView#setVanishingPointAppClose(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointApp" id="fr.irstv.view/MenuBarView#getVanishingPointApp()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointApp" id="fr.irstv.view/MenuBarView#setVanishingPointApp(Ljavax.swing.JMenu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointAppClose" id="fr.irstv.view/MenuBarView#getVanishingPointAppClose()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setURLOpen" id="fr.irstv.view/MenuBarView#setURLOpen(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getURLOpen" id="fr.irstv.view/MenuBarView#getURLOpen()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setWorkingAreaShow" id="fr.irstv.view/MenuBarView#setWorkingAreaShow(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setHPointsListHide" id="fr.irstv.view/MenuBarView#setHPointsListHide(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegmentsListShow" id="fr.irstv.view/MenuBarView#getSegmentsListShow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWorkingAreaShow" id="fr.irstv.view/MenuBarView#getWorkingAreaShow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegmentsListShow" id="fr.irstv.view/MenuBarView#setSegmentsListShow(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWorkingArea" id="fr.irstv.view/MenuBarView#getWorkingArea()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHPointsListHide" id="fr.irstv.view/MenuBarView#getHPointsListHide()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setWorkingAreaHide" id="fr.irstv.view/MenuBarView#setWorkingAreaHide(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointListHide" id="fr.irstv.view/MenuBarView#setVanishingPointListHide(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointListHide" id="fr.irstv.view/MenuBarView#getVanishingPointListHide()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegmentsListHide" id="fr.irstv.view/MenuBarView#getSegmentsListHide()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointListShow" id="fr.irstv.view/MenuBarView#setVanishingPointListShow(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegmentsListHide" id="fr.irstv.view/MenuBarView#setSegmentsListHide(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setHPointsListShow" id="fr.irstv.view/MenuBarView#setHPointsListShow(Ljavax.swing.JMenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWorkingAreaHide" id="fr.irstv.view/MenuBarView#getWorkingAreaHide()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setWorkingArea" id="fr.irstv.view/MenuBarView#setWorkingArea(Ljavax.swing.JMenu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHPointsListShow" id="fr.irstv.view/MenuBarView#getHPointsListShow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointListShow" id="fr.irstv.view/MenuBarView#getVanishingPointListShow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUrlOpen" id="fr.irstv.view/MenuBarView#getUrlOpen()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScaleComboBox" id="fr.irstv.view/MenuBarView#getScaleComboBox()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setScaleComboBox" id="fr.irstv.view/MenuBarView#setScaleComboBox(Ljavax.swing.JComboBox;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUrlOpen" id="fr.irstv.view/MenuBarView#setUrlOpen(Ljavax.swing.JMenuItem;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="VanishingPointAppView" location="450,779" size="662,565" id="fr.irstv.view/VanishingPointAppView" runTimeClassModel="getWorkingAreaInternalFrame(),workingAreaInternalFrame,getFileInfoTextField(),setHPointListInternalFrame(Lfr.irstv.view.HPointListInternalFrame;),VanishingPointAppView(Ljava.util.ResourceBundle;),getMenuBarView(),openInternalFrame(Ljava.util.ResourceBundle;Lfr.irstv.dataModel.ImageModel;),getVanishingPointListInternalFrame(),segmentListInternalFrame,hPointListInternalFrame,fileInfoTextField,getFileInfoText(),vanishingPointListInternalFrame,setFileInfoTextField(Ljavax.swing.JTextField;),setVanishingPointListInternalFrame(Lfr.irstv.view.VanishingPointListInternalFrame;),desktop,menuBarView,setMenuBarView(Lfr.irstv.view.MenuBarView;),getDesktop(),getSegmentListInternalFrame(),getHPointListInternalFrame(),setDesktop(Ljavax.swing.JDesktopPane;),closeinternalFrame(),setFileInfoText(Ljavax.swing.JTextField;),setSegmentListInternalFrame(Lfr.irstv.view.SegmentListInternalFrame;),setWorkingAreaInternalFrame(Lfr.irstv.view.WorkingAreaInternalFrame;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="241,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="desktop" id="fr.irstv.view/VanishingPointAppView#desktop"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="menuBarView" id="fr.irstv.view/VanishingPointAppView#menuBarView"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileInfoTextField" id="fr.irstv.view/VanishingPointAppView#fileInfoTextField"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="segmentListInternalFrame" id="fr.irstv.view/VanishingPointAppView#segmentListInternalFrame"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vanishingPointListInternalFrame" id="fr.irstv.view/VanishingPointAppView#vanishingPointListInternalFrame"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workingAreaInternalFrame" id="fr.irstv.view/VanishingPointAppView#workingAreaInternalFrame"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="hPointListInternalFrame" id="fr.irstv.view/VanishingPointAppView#hPointListInternalFrame"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="376,342">
+      <children xsi:type="editmodel:MethodEditModel" name="VanishingPointAppView" id="fr.irstv.view/VanishingPointAppView#VanishingPointAppView(Ljava.util.ResourceBundle;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDesktop" id="fr.irstv.view/VanishingPointAppView#getDesktop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDesktop" id="fr.irstv.view/VanishingPointAppView#setDesktop(Ljavax.swing.JDesktopPane;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMenuBarView" id="fr.irstv.view/VanishingPointAppView#getMenuBarView()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMenuBarView" id="fr.irstv.view/VanishingPointAppView#setMenuBarView(Lfr.irstv.view.MenuBarView;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileInfoTextField" id="fr.irstv.view/VanishingPointAppView#setFileInfoTextField(Ljavax.swing.JTextField;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileInfoTextField" id="fr.irstv.view/VanishingPointAppView#getFileInfoTextField()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setVanishingPointListInternalFrame" id="fr.irstv.view/VanishingPointAppView#setVanishingPointListInternalFrame(Lfr.irstv.view.VanishingPointListInternalFrame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSegmentListInternalFrame" id="fr.irstv.view/VanishingPointAppView#setSegmentListInternalFrame(Lfr.irstv.view.SegmentListInternalFrame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSegmentListInternalFrame" id="fr.irstv.view/VanishingPointAppView#getSegmentListInternalFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVanishingPointListInternalFrame" id="fr.irstv.view/VanishingPointAppView#getVanishingPointListInternalFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="openInternalFrame" id="fr.irstv.view/VanishingPointAppView#openInternalFrame(Ljava.util.ResourceBundle;Lfr.irstv.dataModel.ImageModel;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHPointListInternalFrame" id="fr.irstv.view/VanishingPointAppView#getHPointListInternalFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWorkingAreaInternalFrame" id="fr.irstv.view/VanishingPointAppView#getWorkingAreaInternalFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileInfoText" id="fr.irstv.view/VanishingPointAppView#getFileInfoText()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setHPointListInternalFrame" id="fr.irstv.view/VanishingPointAppView#setHPointListInternalFrame(Lfr.irstv.view.HPointListInternalFrame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setWorkingAreaInternalFrame" id="fr.irstv.view/VanishingPointAppView#setWorkingAreaInternalFrame(Lfr.irstv.view.WorkingAreaInternalFrame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileInfoText" id="fr.irstv.view/VanishingPointAppView#setFileInfoText(Ljavax.swing.JTextField;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="closeinternalFrame" id="fr.irstv.view/VanishingPointAppView#closeinternalFrame()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="Constants" location="440,50" size="326,1284" id="fr.irstv.view/Constants" runTimeClassModel="xML_FILE_NOT_READ_MESSAGE,mENU_SEGMENT_SHOW_DESCRIPTION,mENU_H_POINT_HIDE,mENU_SEGMENT_LIST_SHOW,mENU_H_POINT_NAME_DESCRIPTION,mENU_VANISHING_POINT_APP_CLOSE_DESCRIPTION,mENU_SEGMENT_LIST_SHOW_DESCRIPTION,mENU_VANISHING_POINT_HIDE_CIRCLES_DESCRIPTION,mENU_FILE_OPEN,mENU_VANISHING_POINT_SHOW_LIST,mENU_SEGMENT_SHOW_VANISHING_POINT_COLOR_DESCRIPTION,mENU_FILE_NAME_DESCRIPTION,mENU_H_POINT_LIST_SHOW_DESCRIPTION,mENU_VANISHING_POINT_NAME,vANISHING_POINT_LIST_INTERNAL_FRAME_NAME,mENU_H_POINT_NAME,mENU_SEGMENT_HIDE_VANISHING_POINT_COLOR,mENU_SEGMENT_HIDE,mENU_H_POINT_LIST_HIDE_DESCRIPTION,mENU_SEGMENT_HIDE_VANISHING_POINT_COLOR_DESCRIPTION,mENU_H_POINT_SHOW_DESCRIPTION,iO_URL_FILE_MESSAGE,mENU_VANISHING_POINT_SHOW_LIST_DESCRIPTION,mENU_URL_OPEN_DESCRIPTION,mENU_VANISHING_POINT_APP_NAME_DESCRIPTION,mENU_FILE_OPEN_DESCRIPTION,mENU_VANISHING_POINT_SHOW_DESCRIPTION,mAL_FORMED_URL_MESSAGE,mENU_URL_OPEN,mENU_WORKING_AREA_NAME_DESCRIPTION,mENU_VANISHING_POINT_SHOW,mENU_VANISHING_POINT_HIDE_LIST,mENU_WORKING_AREA_HIDE,mENU_VANISHING_POINT_HIDE_DESCRIPTION,mENU_H_POINT_SHOW,mENU_VANISHING_POINT_SHOW_CIRCLES,mENU_WORKING_AREA_HIDE_DESCRIPTION,oPEN_URL_DIALOG_TITLE,mENU_SEGMENT_HIDE_DESCRIPTION,mENU_SEGMENT_LIST_HIDE,mENU_VANISHING_POINT_HIDE,mENU_H_POINT_LIST_HIDE,mENU_VANISHING_POINT_APP_NAME,mENU_FILE_CLOSE_DESCRIPTION,mENU_VANISHING_POINT_HIDE_LIST_DESCRIPTION,sEGMENT_LIST_INTERNAL_FRAME_NAME,mENU_WORKING_AREA_NAME,mENU_H_POINT_LIST_SHOW,wORKING_AREA_INTERNAL_FRAME_NAME,mENU_H_POINT_HIDE_DESCRIPTION,mENU_FILE_NAME,mENU_SEGMENT_LIST_HIDE_DESCRIPTION,mENU_SEGMENT_NAME_DESCRIPTION,mENU_WORKING_AREA_SHOW_DESCRIPTION,mENU_VANISHING_POINT_SHOW_CIRCLES_DESCRIPTION,mENU_VANISHING_POINT_APP_CLOSE,mENU_SEGMENT_SHOW_VANISHING_POINT_COLOR,xML_FILE_NOT_FOUND_MESSAGE,mENU_SEGMENT_NAME,h_POINT_LIST_INTERNAL_FRAME_NAME,mAIN_WINDOW_TITLE_PROPERTY,mENU_FILE_CLOSE,mENU_WORKING_AREA_SHOW,mENU_VANISHING_POINT_HIDE_CIRCLES,oPEN_URL_DIALOG_MESSAGE,mENU_VANISHING_POINT_NAME_DESCRIPTION,mENU_SEGMENT_SHOW">
+    <children xsi:type="editmodel:CompartmentEditModel" size="303,1206">
+      <children xsi:type="editmodel:AttributeEditModel" name="mAIN_WINDOW_TITLE_PROPERTY" id="fr.irstv.view/Constants#mAIN_WINDOW_TITLE_PROPERTY"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_FILE_CLOSE" id="fr.irstv.view/Constants#mENU_FILE_CLOSE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_FILE_CLOSE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_FILE_CLOSE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_FILE_NAME" id="fr.irstv.view/Constants#mENU_FILE_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_FILE_NAME_DESCRIPTION" id="fr.irstv.view/Constants#mENU_FILE_NAME_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_FILE_OPEN" id="fr.irstv.view/Constants#mENU_FILE_OPEN"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_FILE_OPEN_DESCRIPTION" id="fr.irstv.view/Constants#mENU_FILE_OPEN_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_HIDE" id="fr.irstv.view/Constants#mENU_H_POINT_HIDE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_HIDE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_H_POINT_HIDE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_NAME" id="fr.irstv.view/Constants#mENU_H_POINT_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_NAME_DESCRIPTION" id="fr.irstv.view/Constants#mENU_H_POINT_NAME_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_SHOW" id="fr.irstv.view/Constants#mENU_H_POINT_SHOW"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_SHOW_DESCRIPTION" id="fr.irstv.view/Constants#mENU_H_POINT_SHOW_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_HIDE" id="fr.irstv.view/Constants#mENU_SEGMENT_HIDE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_HIDE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_SEGMENT_HIDE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_HIDE_VANISHING_POINT_COLOR" id="fr.irstv.view/Constants#mENU_SEGMENT_HIDE_VANISHING_POINT_COLOR"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_HIDE_VANISHING_POINT_COLOR_DESCRIPTION" id="fr.irstv.view/Constants#mENU_SEGMENT_HIDE_VANISHING_POINT_COLOR_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_NAME" id="fr.irstv.view/Constants#mENU_SEGMENT_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_NAME_DESCRIPTION" id="fr.irstv.view/Constants#mENU_SEGMENT_NAME_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_SHOW" id="fr.irstv.view/Constants#mENU_SEGMENT_SHOW"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_SHOW_DESCRIPTION" id="fr.irstv.view/Constants#mENU_SEGMENT_SHOW_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_SHOW_VANISHING_POINT_COLOR" id="fr.irstv.view/Constants#mENU_SEGMENT_SHOW_VANISHING_POINT_COLOR"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_SHOW_VANISHING_POINT_COLOR_DESCRIPTION" id="fr.irstv.view/Constants#mENU_SEGMENT_SHOW_VANISHING_POINT_COLOR_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_HIDE" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_HIDE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_HIDE_CIRCLES" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_HIDE_CIRCLES"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_HIDE_CIRCLES_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_HIDE_CIRCLES_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_HIDE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_HIDE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_NAME" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_NAME_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_NAME_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_SHOW" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_SHOW"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_SHOW_CIRCLES" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_SHOW_CIRCLES"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_SHOW_CIRCLES_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_SHOW_CIRCLES_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_SHOW_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_SHOW_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="xML_FILE_NOT_FOUND_MESSAGE" id="fr.irstv.view/Constants#xML_FILE_NOT_FOUND_MESSAGE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="xML_FILE_NOT_READ_MESSAGE" id="fr.irstv.view/Constants#xML_FILE_NOT_READ_MESSAGE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_APP_CLOSE" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_APP_CLOSE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_APP_NAME" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_APP_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_APP_CLOSE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_APP_CLOSE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_APP_NAME_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_APP_NAME_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_URL_OPEN" id="fr.irstv.view/Constants#mENU_URL_OPEN"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_URL_OPEN_DESCRIPTION" id="fr.irstv.view/Constants#mENU_URL_OPEN_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="oPEN_URL_DIALOG_TITLE" id="fr.irstv.view/Constants#oPEN_URL_DIALOG_TITLE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mAL_FORMED_URL_MESSAGE" id="fr.irstv.view/Constants#mAL_FORMED_URL_MESSAGE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="oPEN_URL_DIALOG_MESSAGE" id="fr.irstv.view/Constants#oPEN_URL_DIALOG_MESSAGE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iO_URL_FILE_MESSAGE" id="fr.irstv.view/Constants#iO_URL_FILE_MESSAGE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="wORKING_AREA_INTERNAL_FRAME_NAME" id="fr.irstv.view/Constants#wORKING_AREA_INTERNAL_FRAME_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_WORKING_AREA_NAME" id="fr.irstv.view/Constants#mENU_WORKING_AREA_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_WORKING_AREA_SHOW" id="fr.irstv.view/Constants#mENU_WORKING_AREA_SHOW"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_WORKING_AREA_HIDE" id="fr.irstv.view/Constants#mENU_WORKING_AREA_HIDE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_WORKING_AREA_NAME_DESCRIPTION" id="fr.irstv.view/Constants#mENU_WORKING_AREA_NAME_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_WORKING_AREA_SHOW_DESCRIPTION" id="fr.irstv.view/Constants#mENU_WORKING_AREA_SHOW_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_WORKING_AREA_HIDE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_WORKING_AREA_HIDE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_SHOW_LIST" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_SHOW_LIST"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_HIDE_LIST" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_HIDE_LIST"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_SHOW_LIST_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_SHOW_LIST_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_VANISHING_POINT_HIDE_LIST_DESCRIPTION" id="fr.irstv.view/Constants#mENU_VANISHING_POINT_HIDE_LIST_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_LIST_SHOW" id="fr.irstv.view/Constants#mENU_SEGMENT_LIST_SHOW"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_LIST_HIDE" id="fr.irstv.view/Constants#mENU_SEGMENT_LIST_HIDE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_LIST_SHOW_DESCRIPTION" id="fr.irstv.view/Constants#mENU_SEGMENT_LIST_SHOW_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_SEGMENT_LIST_HIDE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_SEGMENT_LIST_HIDE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_LIST_SHOW" id="fr.irstv.view/Constants#mENU_H_POINT_LIST_SHOW"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_LIST_HIDE" id="fr.irstv.view/Constants#mENU_H_POINT_LIST_HIDE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_LIST_SHOW_DESCRIPTION" id="fr.irstv.view/Constants#mENU_H_POINT_LIST_SHOW_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mENU_H_POINT_LIST_HIDE_DESCRIPTION" id="fr.irstv.view/Constants#mENU_H_POINT_LIST_HIDE_DESCRIPTION"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="h_POINT_LIST_INTERNAL_FRAME_NAME" id="fr.irstv.view/Constants#h_POINT_LIST_INTERNAL_FRAME_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vANISHING_POINT_LIST_INTERNAL_FRAME_NAME" id="fr.irstv.view/Constants#vANISHING_POINT_LIST_INTERNAL_FRAME_NAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sEGMENT_LIST_INTERNAL_FRAME_NAME" id="fr.irstv.view/Constants#sEGMENT_LIST_INTERNAL_FRAME_NAME"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="XMLFileNotReadException" location="124,1065" size="432,97" id="fr.irstv.view/XMLFileNotReadException" runTimeClassModel="XMLFileNotReadException(Ljava.lang.String;Ljava.awt.Component;Ljava.util.ResourceBundle;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="367,18">
+      <children xsi:type="editmodel:MethodEditModel" name="XMLFileNotReadException" id="fr.irstv.view/XMLFileNotReadException#XMLFileNotReadException(Ljava.lang.String;Ljava.awt.Component;Ljava.util.ResourceBundle;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="OpenURLDialog" location="844,1019" size="432,241" id="fr.irstv.view/OpenURLDialog" runTimeClassModel="OpenURLDialog(Ljava.awt.Component;Ljava.util.ResourceBundle;),setFile(Ljava.io.File;),value,file,getURL(),url,setURL(Ljava.net.URL;),getFile()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="61,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="file" id="fr.irstv.view/OpenURLDialog#file"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="url" id="fr.irstv.view/OpenURLDialog#url"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="value" id="fr.irstv.view/OpenURLDialog#value"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="264,90">
+      <children xsi:type="editmodel:MethodEditModel" name="OpenURLDialog" id="fr.irstv.view/OpenURLDialog#OpenURLDialog(Ljava.awt.Component;Ljava.util.ResourceBundle;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFile" id="fr.irstv.view/OpenURLDialog#getFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getURL" id="fr.irstv.view/OpenURLDialog#getURL()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFile" id="fr.irstv.view/OpenURLDialog#setFile(Ljava.io.File;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setURL" id="fr.irstv.view/OpenURLDialog#setURL(Ljava.net.URL;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="HPointListInternalFrame" location="790,59" size="248,97" id="fr.irstv.view/HPointListInternalFrame" runTimeClassModel="HPointListInternalFrame(Ljava.util.ResourceBundle;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="199,18">
+      <children xsi:type="editmodel:MethodEditModel" name="HPointListInternalFrame" id="fr.irstv.view/HPointListInternalFrame#HPointListInternalFrame(Ljava.util.ResourceBundle;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterlas="true"/>
+</editmodel:ClassDiagramEditModel>

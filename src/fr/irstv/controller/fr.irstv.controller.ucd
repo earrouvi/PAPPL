@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" id="fr.irstv.controller" metadata="uml2-1.0" initialized="true" scrolledY="178" tag="5" key="323030363130303620706F696E747364656675697465">
+  <children xsi:type="editmodel:ClassEditModel" name="MenuBarOpenFileController" location="50,50" size="528,223" id="fr.irstv.controller/MenuBarOpenFileController" runTimeClassModel="fileOpen,MenuBarOpenFileController(Lfr.irstv.dataModel.ImageModel;Ljavax.swing.JMenuItem;Ljava.awt.Component;Ljava.util.ResourceBundle;),component,update(Ljava.util.Observable;Ljava.lang.Object;),imageModel,actionPerformed(Ljava.awt.event.ActionEvent;),stringValues">
+    <children xsi:type="editmodel:CompartmentEditModel" size="120,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="component" id="fr.irstv.controller/MenuBarOpenFileController#component"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileOpen" id="fr.irstv.controller/MenuBarOpenFileController#fileOpen"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="imageModel" id="fr.irstv.controller/MenuBarOpenFileController#imageModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stringValues" id="fr.irstv.controller/MenuBarOpenFileController#stringValues"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="505,54">
+      <children xsi:type="editmodel:MethodEditModel" name="MenuBarOpenFileController" id="fr.irstv.controller/MenuBarOpenFileController#MenuBarOpenFileController(Lfr.irstv.dataModel.ImageModel;Ljavax.swing.JMenuItem;Ljava.awt.Component;Ljava.util.ResourceBundle;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="fr.irstv.controller/MenuBarOpenFileController#actionPerformed(Ljava.awt.event.ActionEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="update" id="fr.irstv.controller/MenuBarOpenFileController#update(Ljava.util.Observable;Ljava.lang.Object;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MenuBarCloseFileController" location="50,305" size="442,187" id="fr.irstv.controller/MenuBarCloseFileController" runTimeClassModel="frame,update(Ljava.util.Observable;Ljava.lang.Object;),MenuBarCloseFileController(Lfr.irstv.dataModel.ImageModel;Ljavax.swing.JMenuItem;Lfr.irstv.view.VanishingPointAppView;),imageModel,actionPerformed(Ljava.awt.event.ActionEvent;),fileClose">
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="fileClose" id="fr.irstv.controller/MenuBarCloseFileController#fileClose"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="imageModel" id="fr.irstv.controller/MenuBarCloseFileController#imageModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frame" id="fr.irstv.controller/MenuBarCloseFileController#frame"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="304,54">
+      <children xsi:type="editmodel:MethodEditModel" name="MenuBarCloseFileController" id="fr.irstv.controller/MenuBarCloseFileController#MenuBarCloseFileController(Lfr.irstv.dataModel.ImageModel;Ljavax.swing.JMenuItem;Lfr.irstv.view.VanishingPointAppView;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="fr.irstv.controller/MenuBarCloseFileController#actionPerformed(Ljava.awt.event.ActionEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="update" id="fr.irstv.controller/MenuBarCloseFileController#update(Ljava.util.Observable;Ljava.lang.Object;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MenuBarCloseAppController" location="563,305" size="235,206" id="fr.irstv.controller/MenuBarCloseAppController" runTimeClassModel="component,MenuBarCloseAppController(Ljavax.swing.JFrame;),actionPerformed(Ljava.awt.event.ActionEvent;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="87,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="component" id="fr.irstv.controller/MenuBarCloseAppController#component"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="200,36">
+      <children xsi:type="editmodel:MethodEditModel" name="MenuBarCloseAppController" id="fr.irstv.controller/MenuBarCloseAppController#MenuBarCloseAppController(Ljavax.swing.JFrame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="fr.irstv.controller/MenuBarCloseAppController#actionPerformed(Ljava.awt.event.ActionEvent;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="FileInfoTextController" location="701,77" size="298,205" id="fr.irstv.controller/FileInfoTextController" runTimeClassModel="update(Ljava.util.Observable;Ljava.lang.Object;),textPane,FileInfoTextController(Ljavax.swing.JTextField;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="87,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="textPane" id="fr.irstv.controller/FileInfoTextController#textPane"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="175,36">
+      <children xsi:type="editmodel:MethodEditModel" name="FileInfoTextController" id="fr.irstv.controller/FileInfoTextController#FileInfoTextController(Ljavax.swing.JTextField;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="update" id="fr.irstv.controller/FileInfoTextController#update(Ljava.util.Observable;Ljava.lang.Object;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MenuBarOpenURLController" location="1000,343" size="532,223" id="fr.irstv.controller/MenuBarOpenURLController" runTimeClassModel="urlOpen,component,update(Ljava.util.Observable;Ljava.lang.Object;),imageModel,actionPerformed(Ljava.awt.event.ActionEvent;),stringValues,openURIDialog,MenuBarOpenURLController(Lfr.irstv.dataModel.ImageModel;Ljavax.swing.JMenuItem;Ljava.awt.Component;Ljava.util.ResourceBundle;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="component" id="fr.irstv.controller/MenuBarOpenURLController#component"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="imageModel" id="fr.irstv.controller/MenuBarOpenURLController#imageModel"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="openURIDialog" id="fr.irstv.controller/MenuBarOpenURLController#openURIDialog"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stringValues" id="fr.irstv.controller/MenuBarOpenURLController#stringValues"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="urlOpen" id="fr.irstv.controller/MenuBarOpenURLController#urlOpen"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="507,54">
+      <children xsi:type="editmodel:MethodEditModel" name="MenuBarOpenURLController" id="fr.irstv.controller/MenuBarOpenURLController#MenuBarOpenURLController(Lfr.irstv.dataModel.ImageModel;Ljavax.swing.JMenuItem;Ljava.awt.Component;Ljava.util.ResourceBundle;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="fr.irstv.controller/MenuBarOpenURLController#actionPerformed(Ljava.awt.event.ActionEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="update" id="fr.irstv.controller/MenuBarOpenURLController#update(Ljava.util.Observable;Ljava.lang.Object;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MenuBarWorkingAreaShowController" location="125,513" size="619,169" id="fr.irstv.controller/MenuBarWorkingAreaShowController" runTimeClassModel="workingAreaHide,workingAreaInternalFrame,actionPerformed(Ljava.awt.event.ActionEvent;),MenuBarWorkingAreaShowController(Ljavax.swing.JMenuItem;Ljavax.swing.JMenuItem;Lfr.irstv.view.WorkingAreaInternalFrame;),workingAreaShow">
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:AttributeEditModel" name="workingAreaHide" id="fr.irstv.controller/MenuBarWorkingAreaShowController#workingAreaHide"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workingAreaInternalFrame" id="fr.irstv.controller/MenuBarWorkingAreaShowController#workingAreaInternalFrame"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workingAreaShow" id="fr.irstv.controller/MenuBarWorkingAreaShowController#workingAreaShow"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:MethodEditModel" name="MenuBarWorkingAreaShowController" id="fr.irstv.controller/MenuBarWorkingAreaShowController#MenuBarWorkingAreaShowController(Ljavax.swing.JMenuItem;Ljavax.swing.JMenuItem;Lfr.irstv.view.WorkingAreaInternalFrame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="fr.irstv.controller/MenuBarWorkingAreaShowController#actionPerformed(Ljava.awt.event.ActionEvent;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Naturel" methodSorter="Naturel" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterlas="true"/>
+</editmodel:ClassDiagramEditModel>
