@@ -181,7 +181,7 @@ public class Utils {
 		for (Iterator<Map.Entry<Integer, Vector<Segment>>> e = map.entrySet().iterator(); e.hasNext();){
 			Map.Entry<Integer, Vector<Segment>> ent = (Map.Entry<Integer, Vector<Segment>>) e.next();
 			i.getProcessor().setColor(colorMap.get(ent.getKey()));
-			displayVanishingPoints(i, dg[ent.getKey()].getCentroid());
+			//displayVanishingPoints(i, dg[ent.getKey()].computeCentroid());
 			for (int m=0; m<ent.getValue().size(); m++){
 				Segment s = ent.getValue().get(m);
 				i.getProcessor().drawLine(s.getStartPoint().getX(), s.getStartPoint().getY(), s.getEndPoint().getX(), s.getEndPoint().getY());

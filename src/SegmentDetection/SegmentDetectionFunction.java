@@ -64,6 +64,7 @@ public class SegmentDetectionFunction {
 				fileBaseName = path;
 			}
 			String fileBaseNameWithoutExtension = (fileBaseName != null) ? fileBaseName.substring(0,fileBaseName.indexOf('.')) : "";
+			System.out.println("dszerzger");
 			exportToXML(is, fileBaseNameWithoutExtension);
 		} catch (NullPointerException fnfe){
 			System.out.println("The file you tried to process cannot be reached.");
@@ -76,7 +77,7 @@ public class SegmentDetectionFunction {
 		PrintWriter file;
 
 	    try{
-	    	file =  new PrintWriter(new BufferedWriter(new FileWriter(path + ".xml")));
+	    	file =  new PrintWriter(new BufferedWriter(new FileWriter("XML/"+path + ".xml")));
 
 		    file.println("<?xml version=\"1.0\" ?>");
 
@@ -103,10 +104,7 @@ public class SegmentDetectionFunction {
 	    	System.out.println("Cannot access to image segment map. Must be computed.");
 	    	npe.printStackTrace();
 	    }
-	    
 	}
-	// liste des segments à récupérer : finalSegmentMap
-	
 	
 	// same method as above but without segment detection - only displaying segments
 	public void segmentDisplayFunction(String file, HashMap<Integer, Vector<Segment>> segmentMap, DataGroup[] dg) {
@@ -117,11 +115,11 @@ public class SegmentDetectionFunction {
 		colorMap.put(0, Color.RED);
 		colorMap.put(1, Color.BLUE);
 		colorMap.put(2, Color.GREEN);
-		colorMap.put(3, Color.YELLOW);
-		colorMap.put(4, Color.WHITE);
-		colorMap.put(5, Color.BLACK);
+		colorMap.put(3, Color.ORANGE);
+		colorMap.put(4, Color.YELLOW);
+		colorMap.put(5, Color.MAGENTA);
 		colorMap.put(6, Color.CYAN);
-		colorMap.put(7, Color.ORANGE);
+		colorMap.put(7, Color.WHITE);
 		
 		ImageSegment is = new ImageSegment(path);
 		ImagePlus is2 = is.baseImage;
