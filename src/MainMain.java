@@ -1,10 +1,7 @@
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Vector;
+import java.util.*;
 
-import SegmentDetection.Segment;
-import SegmentDetection.SegmentDetectionFunction;
-import SegmentDetection.Utils;
+import SegmentDetection.*;
 import fr.irstv.kmeans.*;
 
 public class MainMain {
@@ -15,7 +12,7 @@ public class MainMain {
 	 */
 	public static void main(String[] args) throws IOException {
 		
-		String file = "DSCN3616";
+		String file = "facade5";
 		
 		UsefulMethods um = new UsefulMethods();
 
@@ -25,8 +22,11 @@ public class MainMain {
 		DataGroup[] theDataGroup = rsf.theDataGroup; // cleaned groups of DataPoints
 		HashMap<Integer, Vector<Segment>> segmentsList = sdf.segmentsList; // list of detected segments
 		
-		HashMap<Integer, Vector<Segment>> segmentMap = um.groupBeforeDisplay(theDataGroup/*, segmentsList*/);
+		HashMap<Integer, Vector<Segment>> segmentMap = um.groupBeforeDisplay(theDataGroup);
 		sdf.segmentDisplayFunction("Images/"+file+".jpg", segmentMap, theDataGroup);
+		
+		SegmentSelectionFrame ssf = new SegmentSelectionFrame(segmentMap);
+		ArrayList<Integer> groupsChosen = ssf.groupsChosen;
 		
 	}
 
