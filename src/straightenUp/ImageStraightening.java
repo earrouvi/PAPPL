@@ -21,28 +21,34 @@ public class ImageStraightening extends ImagePlus {
 		DenseMatrix hh = h.squareHomography;
 		int width = (int) Math.ceil(h.endPoints.get(3).getX()-h.endPoints.get(0).getX());
 		int height = (int) Math.ceil(h.endPoints.get(1).getY()-h.endPoints.get(0).getY());
-		result = NewImage.createRGBImage("result", 1600, 1600, 1, NewImage.FILL_BLACK);
+		int startX, startY, endX, endY;
+		startX = (int) Math.ceil(h.beginPoints.get(0).getX());
+		startY = (int) Math.ceil(h.beginPoints.get(0).getY());
+		endX = (int) Math.ceil(h.beginPoints.get(2).getX());
+		endY = (int) Math.ceil(h.beginPoints.get(2).getY());
+		
+		result = NewImage.createRGBImage("result", width*5, height*5, 1, NewImage.FILL_BLACK);
 		result.getProcessor().setColor(Color.WHITE);
 		this.show();
 		
 		// real work here
-		for (int i=0;i<this.height-700;i++) {
-			for (int j=0;j<this.width-700;j++) {
+		System.out.println("Straightening up the image, please wait...");
+		for (int i=startX;i<endX;i++) {
+			for (int j=startY;j<endY;j++) {
 				int[] pixel = getStartPixel(i,j);
-				int[] pixel2 = new int[3];
-				pixel2[0] = 200;
 				DenseMatrix X = new DenseMatrix(3,1);
 				DenseMatrix Y = new DenseMatrix(3,1);
 				X.set(0, 0, i);
 				X.set(1, 0, j);
 				X.set(2, 0, 1);
 				hh.mult(X, Y);
-				//System.out.println((Y.get(0, 0))+" "+(Y.get(1, 0)));
-				setPixel((int) Y.get(0, 0), ((int) Y.get(1, 0)), pixel);
+				setPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)), ((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))), pixel);
 				//System.out.println(pixel[0]+" "+pixel[1]+" "+pixel[2]);
+				//int[] pixel2 = getStartPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)),((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))));
+				//setPixel(i, j, pixel2);
 			}
-			System.out.println("fini");
 		}
+		System.out.println("Computation is over.");
 		result.show();
 	}
 	

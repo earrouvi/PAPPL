@@ -30,7 +30,9 @@ public class Homography {
 		
 		computeLeft();
 		computeRight();
+		matrixToString(leftMember);
 		computeHomography();
+		matrixToSquare();
 	}
 
 	// calcul de la matrice d'homographie
@@ -53,9 +55,9 @@ public class Homography {
 				leftMember.set(i, 6, Math.pow(-1, i)*endPoints.get(row).getX()*beginPoints.get(row).getX());
 				leftMember.set(i, 7, Math.pow(-1, i)*endPoints.get(row).getX()*beginPoints.get(row).getY());
 			}
-			for (int j=0;j<2;j++) {
-				leftMember.set(i, j+column1, 0);
-			}
+			//for (int j=0;j<2;j++) {
+			//	leftMember.set(i, j+column1, 0);
+			//}
 			leftMember.set(i, column2, Math.pow(-1, i+1)*beginPoints.get(row).getX());
 			leftMember.set(i, column2+1, Math.pow(-1, i+1)*beginPoints.get(row).getY());
 			leftMember.set(i, column2+2, Math.pow(-1, i+1));
@@ -64,19 +66,21 @@ public class Homography {
 	}
 	
 	public void computeRight() {
-		for (int i=0;i<4;i++) {
-			rightMember.set(0, 0, - endPoints.get(i).getY());
-			rightMember.set(0, 0, endPoints.get(i).getX());
+		for (int i=0;i<4;i=i+2) {
+			rightMember.set(i, 0, - endPoints.get(i).getY());
+			rightMember.set(i+1, 0, endPoints.get(i).getX());
 		}
 	}
 	
 	public void matrixToString(DenseMatrix mat) {
+		System.out.println("-------------- Homography matrix ------------------\n");
 		for (int i=0;i<mat.numRows();i++) {
 			for (int j=0;j<mat.numColumns();j++) {
 				System.out.print(mat.get(i, j)+" ");
 			}
 			System.out.println("\n");
 		}
+		System.out.println("---------------------------------------------------\n");
 	}
 	
 	public void matrixToSquare() {
@@ -85,7 +89,7 @@ public class Homography {
 			squareHomography.set(i/3, i%3, homography.get(i, 0));
 		}
 		squareHomography.set(2, 2, 1);
-		matrixToString(homography);
+		//matrixToString(homography);
 		matrixToString(squareHomography);
 	}
 	

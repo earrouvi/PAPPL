@@ -16,9 +16,9 @@ public class MainTest {
 
 		ArrayList<Point> groupe1 = new ArrayList<Point>();
 		groupe1.add(new Point(530,110));
-		groupe1.add(new Point(530,550));
-		groupe1.add(new Point(670,610));
-		groupe1.add(new Point(660,150));
+		groupe1.add(new Point(530,620));
+		groupe1.add(new Point(720,610));
+		groupe1.add(new Point(720,160));
 		ArrayList<Point> groupe2 = new ArrayList<Point>();
 		groupe2.add(new Point(0,0));
 		groupe2.add(new Point(0,500));
@@ -26,7 +26,7 @@ public class MainTest {
 		groupe2.add(new Point(150,0));
 		
 		Homography h = new Homography(groupe1, groupe2);
-		h.matrixToSquare();
+		
 		
 		ImageStraightening i = new ImageStraightening(file);
 		i.straightenUp(h);
