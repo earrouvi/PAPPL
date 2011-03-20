@@ -24,6 +24,8 @@ public class SegmentSelectionFrame extends JFrame implements ActionListener, Ite
 	private static final String VALID="Validate";
 	private JButton closeButton;
 	private static final String CLOSE="Close window";
+	
+	public boolean val = false;
 
 	protected HashMap<Integer, Vector<Segment>> segmentMap = new HashMap<Integer, Vector<Segment>>();
 	protected ArrayList<Integer> groupsChosen;
@@ -35,11 +37,11 @@ public class SegmentSelectionFrame extends JFrame implements ActionListener, Ite
 			IJ.showMessage("You are using a pre 1.4 version of java, exporting and loading marker data is disabled");
 		}
 		setResizable(false);
-		
+
 		// attributes initialisation
 		this.segmentMap = segmentMap;
 		groupsChosen = new ArrayList<Integer>();
-		
+
 		initGUI();
 		//populateTxtFields();
 		addKeyListener(this);
@@ -61,26 +63,26 @@ public class SegmentSelectionFrame extends JFrame implements ActionListener, Ite
 		// global frame
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.PAGE_AXIS));
-		
+
 		// panel containing the check boxes
 		statButtonPanel=new JPanel();
 		statButtonPanel.setBorder(BorderFactory.createTitledBorder("Choose groups"));
 		statButtonPanel.setLayout(new BoxLayout(statButtonPanel, BoxLayout.PAGE_AXIS));
 		statButtonPanel.add(Box.createHorizontalGlue());
 		getContentPane().add(statButtonPanel);
-		
+
 		// creating the check boxes
 		for (int i=0;i<segmentMap.size();i++) {
 			createCheckBox(0, colorMap.get(i));
 		}
-		
+
 		// validate button
 		validateButton = makeButton(VALID, "Validate the chosen groups");
 		getContentPane().add(validateButton);
-		
-//		// close button
-//		closeButton = makeButton(CLOSE, "Close window");
-//		getContentPane().add(closeButton);
+
+		//		// close button
+		//		closeButton = makeButton(CLOSE, "Close window");
+		//		getContentPane().add(closeButton);
 
 		// showing the frame
 		Runnable runner = new GUIShower(this);
@@ -123,13 +125,14 @@ public class SegmentSelectionFrame extends JFrame implements ActionListener, Ite
 	public void actionPerformed(ActionEvent event) {
 		String command = event.getActionCommand();
 		if (command.compareTo(VALID) == 0) {
-			 System.out.println("-----\nYou have chosen :");
-			 for (int i=1;i<statButtonPanel.getComponentCount();i++) {
-				 if (((JCheckBox) statButtonPanel.getComponent(i)).isSelected()) {
-					 groupsChosen.add(i-1);
-					 System.out.println("group "+(i-1));
-				 }
-			 }
+			val = true;
+			System.out.println("-----\nYou have chosen :");
+			for (int i=1;i<statButtonPanel.getComponentCount();i++) {
+				if (((JCheckBox) statButtonPanel.getComponent(i)).isSelected()) {
+					groupsChosen.add(i-1);
+					System.out.println("group "+(i-1));
+				}
+			}
 		}
 	}
 

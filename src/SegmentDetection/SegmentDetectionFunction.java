@@ -4,15 +4,8 @@ import fr.irstv.kmeans.DataGroup;
 import ij.ImagePlus;
 
 import java.awt.Color;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Vector;
-
+import java.io.*;
+import java.util.*;
 
 /**
  * @author Leo COLLET, Cedric TELEGONE, Ecole Centrale Nantes, 2010
@@ -125,6 +118,27 @@ public class SegmentDetectionFunction {
 		ImagePlus is2 = is.baseImage;
 		// displaying the image
 		Utils.getImageFromSegmentMap(is2, segmentMap, colorMap, dg);
+	}
+	
+	// same method as above but only displaying chosen segments
+	public void segmentDisplayFunction(String file, HashMap<Integer, Vector<Segment>> segmentMap, ArrayList<Integer> groupsChosen) {
+		String path = file;
+
+		// creating the color map
+		HashMap<Integer,Color> colorMap = new HashMap<Integer,Color>(8);
+		colorMap.put(0, Color.RED);
+		colorMap.put(1, Color.BLUE);
+		colorMap.put(2, Color.GREEN);
+		colorMap.put(3, Color.ORANGE);
+		colorMap.put(4, Color.YELLOW);
+		colorMap.put(5, Color.MAGENTA);
+		colorMap.put(6, Color.CYAN);
+		colorMap.put(7, Color.WHITE);
+		
+		ImageSegment is = new ImageSegment(path);
+		ImagePlus is2 = is.baseImage;
+		// displaying the image
+		Utils.getImageFromSegmentMap(is2, segmentMap, colorMap, groupsChosen);
 	}
 
 }

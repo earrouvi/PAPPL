@@ -191,6 +191,27 @@ public class Utils {
 		i.show();
 	}
 	
+	/**
+	 * @author Elsa Arrou-Vignod, Florent Buisson
+	 * same method as above, but displays only the chosen segments groups
+	 * @param image
+	 * @param map
+	 * @param colorMap
+	 */
+	public static void getImageFromSegmentMap(ImagePlus image, HashMap<Integer, Vector<Segment>> map, HashMap<Integer,Color> colorMap, ArrayList<Integer> groupsChosen){
+		ImagePlus i = new ImagePlus ("Output segment mapping", image.getProcessor().convertToRGB());
+		for (int l : groupsChosen){
+			Vector<Segment> ent = map.get(l);
+			i.getProcessor().setColor(colorMap.get(l));
+			for (int m=0; m<ent.size(); m++){
+				Segment s = ent.get(m);
+				i.getProcessor().drawLine(s.getStartPoint().getX(), s.getStartPoint().getY(), s.getEndPoint().getX(), s.getEndPoint().getY());
+			}
+		}
+		i.setTitle("Output segment mapping image");
+		i.show();
+	}
+	
 	public static void displayVanishingPoints(ImagePlus i, DataPoint vp) {
 		i.getProcessor().fillOval((int) vp.get(0), (int) vp.get(1), 10, 10);
 	}

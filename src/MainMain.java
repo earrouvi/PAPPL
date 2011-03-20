@@ -12,7 +12,7 @@ public class MainMain {
 	 */
 	public static void main(String[] args) throws IOException {
 		
-		String file = "facade5";
+		String file = "facade1";
 		
 		UsefulMethods um = new UsefulMethods();
 
@@ -26,7 +26,9 @@ public class MainMain {
 		sdf.segmentDisplayFunction("Images/"+file+".jpg", segmentMap, theDataGroup);
 		
 		SegmentSelectionFrame ssf = new SegmentSelectionFrame(segmentMap);
+		while (!ssf.val) { System.out.print(""); }
 		ArrayList<Integer> groupsChosen = ssf.groupsChosen;
+		sdf.segmentDisplayFunction("Images/"+file+".jpg", segmentMap, groupsChosen);
 		
 	}
 
