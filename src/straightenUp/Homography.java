@@ -66,9 +66,9 @@ public class Homography {
 	}
 	
 	public void computeRight() {
-		for (int i=0;i<4;i=i+2) {
-			rightMember.set(i, 0, - endPoints.get(i).getY());
-			rightMember.set(i+1, 0, endPoints.get(i).getX());
+		for (int i=0;i<4;i++) {
+			rightMember.set(2*i, 0, - endPoints.get(i).getY());
+			rightMember.set(2*i+1, 0, endPoints.get(i).getX());
 		}
 	}
 	
@@ -85,11 +85,15 @@ public class Homography {
 	
 	public void matrixToSquare() {
 		squareHomography = new DenseMatrix(3,3);
+		//DenseMatrix squareHomography2 = new DenseMatrix(3,3);
+		//DenseMatrix Id = new DenseMatrix(3,3);
+		//Id.set(0, 0, 1); Id.set(1, 1, 1); Id.set(2, 2, 1); 
 		for (int i=0;i<8;i++) {
 			squareHomography.set(i/3, i%3, homography.get(i, 0));
 		}
 		squareHomography.set(2, 2, 1);
 		//matrixToString(homography);
+		//squareHomography2.solve(Id, squareHomography);
 		matrixToString(squareHomography);
 	}
 	

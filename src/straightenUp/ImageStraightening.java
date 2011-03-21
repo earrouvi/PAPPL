@@ -27,12 +27,13 @@ public class ImageStraightening extends ImagePlus {
 		endX = (int) Math.ceil(h.beginPoints.get(2).getX());
 		endY = (int) Math.ceil(h.beginPoints.get(2).getY());
 		
-		result = NewImage.createRGBImage("result", width*5, height*5, 1, NewImage.FILL_BLACK);
+		result = NewImage.createRGBImage("result", width, height, 1, NewImage.FILL_BLACK);
 		result.getProcessor().setColor(Color.WHITE);
 		this.show();
 		
 		// real work here
 		System.out.println("Straightening up the image, please wait...");
+		int compt = 0;
 		for (int i=startX;i<endX;i++) {
 			for (int j=startY;j<endY;j++) {
 				int[] pixel = getStartPixel(i,j);
@@ -43,13 +44,21 @@ public class ImageStraightening extends ImagePlus {
 				X.set(2, 0, 1);
 				hh.mult(X, Y);
 				setPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)), ((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))), pixel);
-				//System.out.println(pixel[0]+" "+pixel[1]+" "+pixel[2]);
+				//System.out.println(Math.floor(Y.get(0, 0)/Y.get(2, 0))+" "+Math.floor(Y.get(1, 0)/Y.get(2, 0)));
 				//int[] pixel2 = getStartPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)),((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))));
 				//setPixel(i, j, pixel2);
+				if (Math.floor(Y.get(1, 0)/Y.get(2, 0))>500||Math.floor(Y.get(1, 0)/Y.get(2, 0))<0) {
+					compt++;
+				}
+				if (Math.floor(Y.get(0, 0)/Y.get(2, 0))>150||Math.floor(Y.get(0, 0)/Y.get(2, 0))<0) {
+					compt++;
+				}
 			}
 		}
-		System.out.println("Computation is over.");
+		System.out.println("Computation is over. Pixels outside the image : "+compt);
 		result.show();
+		FileSaver fs = new FileSaver(result);
+		fs.saveAsPng("result1.png");
 	}
 	
 	public int[] getStartPixel(int x, int y) {
