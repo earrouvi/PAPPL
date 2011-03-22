@@ -23,8 +23,8 @@ public class MainTest {
 		ArrayList<Point> groupe2 = new ArrayList<Point>();
 		groupe2.add(new Point(0,0));
 		groupe2.add(new Point(0,500));
-		groupe2.add(new Point(150,500));
-		groupe2.add(new Point(150,0));
+		groupe2.add(new Point(250,500));
+		groupe2.add(new Point(250,0));
 		
 		Homography h = new Homography(groupe1, groupe2);
 //		Homography hh = new Homography(groupe1, groupe2);

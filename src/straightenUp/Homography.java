@@ -10,6 +10,7 @@ public class Homography {
 	
 	protected DenseMatrix homography;
 	protected DenseMatrix squareHomography;
+	protected DenseMatrix reverseSquareHomography;
 	protected DenseMatrix leftMember;
 	protected DenseMatrix rightMember;
 	
@@ -30,7 +31,6 @@ public class Homography {
 		
 		computeLeft();
 		computeRight();
-		matrixToString(leftMember);
 		computeHomography();
 		matrixToSquare();
 	}
@@ -85,15 +85,20 @@ public class Homography {
 	
 	public void matrixToSquare() {
 		squareHomography = new DenseMatrix(3,3);
-		//DenseMatrix squareHomography2 = new DenseMatrix(3,3);
-		//DenseMatrix Id = new DenseMatrix(3,3);
-		//Id.set(0, 0, 1); Id.set(1, 1, 1); Id.set(2, 2, 1); 
+		reverseSquareHomography = new DenseMatrix(3,3);
+		
+		// Identity matrix
+		DenseMatrix Id = new DenseMatrix(3,3);
+		Id.set(0, 0, 1); Id.set(1, 1, 1); Id.set(2, 2, 1); 
+		
+		// Column to square
 		for (int i=0;i<8;i++) {
 			squareHomography.set(i/3, i%3, homography.get(i, 0));
 		}
 		squareHomography.set(2, 2, 1);
-		//matrixToString(homography);
-		//squareHomography2.solve(Id, squareHomography);
+		
+		// Reverse matrix for reverse transformations
+		squareHomography.solve(Id, reverseSquareHomography);
 		matrixToString(squareHomography);
 	}
 	
