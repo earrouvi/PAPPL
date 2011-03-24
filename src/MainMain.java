@@ -1,15 +1,14 @@
 import java.io.IOException;
 import java.util.*;
 
-
 import Scissors.Scissor_Frame;
 import Scissors.algo.VerticesList;
+import Scissors.ScissorsOutlineFunction;
 import SegmentDetection.Segment;
 import SegmentDetection.SegmentDetectionFunction;
 import SegmentDetection.Utils;
-import Scissors.ScissorsOutlineFunction;
-import OutlineComputation.*;
-import SegmentDetection.*;
+import OutlineComputation.ExtractFrontOutlineFunction;
+import OutlineComputation.FinalOutlinePoints;
 import fr.irstv.kmeans.*;
 
 public class MainMain {
@@ -37,6 +36,7 @@ public class MainMain {
 		while (!ssf.val) { System.out.print(""); }
 		ArrayList<Integer> groupsChosen = ssf.groupsChosen;
 		sdf.segmentDisplayFunction("Images/"+file+".jpg", segmentMap, groupsChosen);
+		
 		//Gets the outline.
 		ScissorsOutlineFunction sof = new ScissorsOutlineFunction();
 

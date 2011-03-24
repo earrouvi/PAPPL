@@ -23,12 +23,20 @@ public class RanSacFunction {
 		// here we launch the real job
 		RanSac r = new RanSac(6,dataSet,fd);
 		// param init
+
 		r.setMaxSample(7);
 		r.setSigma(10d);
 		r.setStopThreshold(0.01d);
 		r.go();
 		a += System.currentTimeMillis();
 		
+/* Old parameters
+		r.setMaxSample(5);
+		r.setSigma(40d);
+		r.setStopThreshold(0.1d);
+		r.go();
+		a += System.currentTimeMillis();
+*/
 		System.err.println("--debug-- Computation terminated in "+((float)a)/1000f+"s");
 		
 		// cleaning the groups
