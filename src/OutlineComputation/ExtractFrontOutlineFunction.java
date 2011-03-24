@@ -50,7 +50,13 @@ public class ExtractFrontOutlineFunction {
 		Point vanishingPoint1 = getVanishingPoint(groupsChosen.get(1));
 		System.out.println("plopplopplop. x ="+vanishingPoint1.getX() + "et  y = "+vanishingPoint1.getY());
 		Point baryCenter = getBarycenter();
-		//TODO Verify regular point repartition on outline from scissors
+		
+		if((Math.abs(vanishingPoint0.getY() - im.getHeight()/2)) > (Math.abs(vanishingPoint1.getY()) - im.getHeight()/2)){
+			opComputed.setVanishingPoint(vanishingPoint1);
+		}else{
+			opComputed.setVanishingPoint(vanishingPoint0);
+		}
+		
 		
 		//We are going to guess which outline segment each scissor outline point is associated with
 		double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x =0 , y = 0;
@@ -103,6 +109,7 @@ public class ExtractFrontOutlineFunction {
 		opComputed.add(getCrossOf(afvp0PtGrp1,afvp1PtGrp0));
 		System.out.println("plop4.");
 		opComputed.add(getCrossOf(afvp0PtGrp1,afvp1PtGrp1));
+		
 
 		im.show();
 		return opComputed;
