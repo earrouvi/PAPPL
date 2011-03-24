@@ -17,6 +17,7 @@ public class StraighteningFunction {
 	public StraighteningFunction(FinalOutlinePoints edgesPoints, String file, double groundDistance){
 		this.beginPoints = new ArrayList<Point>(edgesPoints);
 		this.horizontalVanishingPoint = edgesPoints.getVanishingPoint();
+		this.endPoints = new ArrayList<Point>();
 		computeEndPoints(groundDistance);
 		straightenFront(file);
 	}
@@ -24,12 +25,27 @@ public class StraighteningFunction {
 	private void computeEndPoints(double groundDistance){
 		//This algorithm is under the hypothesis vertical vanishing point is very further to image than others.
 		sortBeginPoints();
-		int index = horizontalVanishingPoint.getX() > beginPoints.at(0).getX() ? 4 : 3;
-		double CA = beginPoints.at(index).horizontalVanishingPoint ;
-		double CN = ;
+		int index = horizontalVanishingPoint.getX() > beginPoints.get(0).getX() ? 3 : 2;
+		double CA = beginPoints.get(index).distance(horizontalVanishingPoint);
+		double CN = beginPoints.get(index).distance(beginPoints.get(index == 3 ? 2 : 3));
 		double v = CA * groundDistance / CN;
 		
+		double width = CA / (CA - v);
+		double height = beginPoints.get(index == 3 ? 0 : 1).getY() - beginPoints.get(index).getY();
 		
+		Point upLeft = new Point();
+		upLeft.setLocation(height,0);
+		Point upRight = new Point();
+		upLeft.setLocation(height,width);
+		Point downRight = new Point();
+		downRight.setLocation(0,width);
+		Point downLeft = new Point();
+		downLeft.setLocation(0,0);
+		
+		endPoints.add(upLeft);
+		endPoints.add(upRight);
+		endPoints.add(downRight);
+		endPoints.add(downLeft);
 	}
 	/**
 	 * 
@@ -55,18 +71,18 @@ public class StraighteningFunction {
 		}
 		beginPoints.clear();
 		if(tempSortedBeginPoints.get(0).getY() > tempSortedBeginPoints.get(1).getY()){
-			beginPoints.add(2,tempSortedBeginPoints.get(0));
-			beginPoints.add(3,tempSortedBeginPoints.get(1));
+			beginPoints.add(tempSortedBeginPoints.get(0));
+			beginPoints.add(tempSortedBeginPoints.get(1));
 		}else{
-			beginPoints.add(2,tempSortedBeginPoints.get(1));
-			beginPoints.add(3,tempSortedBeginPoints.get(0));
+			beginPoints.add(tempSortedBeginPoints.get(1));
+			beginPoints.add(tempSortedBeginPoints.get(0));
 		}
-		if(tempSortedBeginPoints.get(3).getY() > tempSortedBeginPoints.get(4).getY()){
-			beginPoints.add(1,tempSortedBeginPoints.get(3));
-			beginPoints.add(4,tempSortedBeginPoints.get(4));
+		if(tempSortedBeginPoints.get(2).getY() > tempSortedBeginPoints.get(3).getY()){
+			beginPoints.add(0,tempSortedBeginPoints.get(2));
+			beginPoints.add(3,tempSortedBeginPoints.get(3));
 		}else{
-			beginPoints.add(1,tempSortedBeginPoints.get(4));
-			beginPoints.add(4,tempSortedBeginPoints.get(3));
+			beginPoints.add(0,tempSortedBeginPoints.get(3));
+			beginPoints.add(3,tempSortedBeginPoints.get(2));
 		}
 	}
 }

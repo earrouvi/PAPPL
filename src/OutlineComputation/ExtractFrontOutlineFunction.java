@@ -116,9 +116,89 @@ public class ExtractFrontOutlineFunction {
 	}
 	
 	/**
-	 * computes corners without using vanishing points
+	 * computes corners using vanishing points
+	 * @param groupsChosen
 	 * @return FinalOutlinePoints
 	 */
+	public FinalOutlinePoints computeFrontOutlineJustFromSegments(ArrayList<Integer> groupsChosen){
+		FinalOutlinePoints opComputed = new FinalOutlinePoints();
+		
+		Point vanishingPoint0 = getVanishingPoint(groupsChosen.get(0));
+		System.out.println("Vanishing point 0 x ="+vanishingPoint0.getX() + "et  y = "+vanishingPoint0.getY());
+		Point vanishingPoint1 = getVanishingPoint(groupsChosen.get(1));
+		System.out.println("Vanishing point 1 x ="+vanishingPoint1.getX() + "et  y = "+vanishingPoint1.getY());
+		Point baryCenter = getBarycenter();
+		
+		if((Math.abs(vanishingPoint0.getY() - im.getHeight()/2)) > (Math.abs(vanishingPoint1.getY()) - im.getHeight()/2)){
+			opComputed.setVanishingPoint(vanishingPoint1);
+			System.out.println("Vanishing point 1 KEPT x ="+vanishingPoint1.getX() + "et  y = "+vanishingPoint1.getY());
+		}else{
+			opComputed.setVanishingPoint(vanishingPoint0);
+			System.out.println("Vanishing point 0 KEPT x ="+vanishingPoint0.getX() + "et  y = "+vanishingPoint0.getY());
+		}
+		
+		
+		//We are going to guess which outline segment each scissor outline point is associated with
+		double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x =0 , y = 0;
+		double x1bary = 0, y1bary = 0, x2bary = 0, y2bary = 0;
+		OutlinePointsGroup vp0PtGrp0 = new OutlinePointsGroup();
+		OutlinePointsGroup vp0PtGrp1 = new OutlinePointsGroup();
+		OutlinePointsGroup vp1PtGrp0 = new OutlinePointsGroup();
+		OutlinePointsGroup vp1PtGrp1 = new OutlinePointsGroup();
+		x1bary = baryCenter.getX() - vanishingPoint0.getX();
+		y1bary = baryCenter.getY() - vanishingPoint0.getY();
+		x2bary = baryCenter.getX() - vanishingPoint1.getX();
+		y2bary = baryCenter.getY() - vanishingPoint1.getY();
+		
+		// Sorts by groups, each group corresponds to one side of the outline.
+		for(int i = 0; i < op.size(); ++i){
+			x1 = op.get(i).getX() - vanishingPoint0.getX();
+			y1 = op.get(i).getY() - vanishingPoint0.getY();
+			x2 = op.get(i).getX() - vanishingPoint1.getX();
+			y2 = op.get(i).getY() - vanishingPoint1.getY();
+			x = i == op.size() - 1 ? op.get(0).getX() - op.get(i).getX() : op.get(i+1).getX() - op.get(i).getX();
+			y = i == op.size() - 1 ? op.get(0).getY() - op.get(i).getY() : op.get(i+1).getY() - op.get(i).getY();
+			if(sortSegments( x1, y1, x2, y2, x, y)){
+				if(x1bary * y1 - y1bary * x1 > 0){
+					vp0PtGrp0.add(op.get(i));
+				}else{
+					vp0PtGrp1.add(op.get(i));
+				}
+			}else{
+				if(x2bary * y2 - y2bary * x2 > 0){
+					vp1PtGrp0.add(op.get(i));
+				}else{
+					vp1PtGrp1.add(op.get(i));
+				}
+			}
+		}
+		// Groups sorted
+		
+		
+		// Computes the outline : af for Affine Parameters, vp Vanishing Poing, PtGrp for PointGroup
+		
+		System.out.println("Adding edge 1...");
+		opComputed.add(vp0PtGrp0.get(0));
+		imProc.drawOval((int) vp0PtGrp0.get(0).getX(), (int) vp0PtGrp0.get(0).getY(), 10, 10) ;
+		System.out.println("Adding edge 2...");
+		opComputed.add(vp0PtGrp0.get(vp0PtGrp0.size() - 1));
+		imProc.drawOval((int) vp0PtGrp0.get(vp0PtGrp0.size() - 1).getX(), (int) vp0PtGrp0.get(vp0PtGrp0.size() - 1).getY(), 10, 10) ;
+		System.out.println("Adding edge 3...");
+		opComputed.add(vp0PtGrp1.get(0));
+		imProc.drawOval((int) vp0PtGrp1.get(0).getX(), (int) vp0PtGrp1.get(0).getY(), 10, 10) ;
+		System.out.println("Adding edge 4...");
+		opComputed.add(vp0PtGrp1.get(vp0PtGrp1.size() - 1));
+		imProc.drawOval((int) vp0PtGrp1.get(vp0PtGrp1.size() - 1).getX(), (int) vp0PtGrp1.get(vp0PtGrp1.size() - 1).getY(), 10, 10) ;
+		System.out.println("Edges added!");
+		
+		im.show();
+		return opComputed;
+	}
+	
+	/**
+	 * computes corners without using vanishing points
+	 * @return FinalOutlinePoints
+	 
 	public FinalOutlinePoints computeFrontOutline() {
 		// inits
 		int max = 0;
@@ -161,7 +241,7 @@ public class ExtractFrontOutlineFunction {
 		im.show();
 		
 		return fop;
-	}
+	}*/
 	
 	public void drawCorners(FinalOutlinePoints fop) {
 		for (Point pt : fop) {

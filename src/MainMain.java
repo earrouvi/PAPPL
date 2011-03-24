@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.util.*;
 
+import straightenUp.StraighteningFunction;
+
 import Scissors.Scissor_Frame;
 import Scissors.algo.VerticesList;
 import Scissors.ScissorsOutlineFunction;
@@ -41,7 +43,10 @@ public class MainMain {
 		ScissorsOutlineFunction sof = new ScissorsOutlineFunction();
 
 		ExtractFrontOutlineFunction efof = new ExtractFrontOutlineFunction(sof.getVl().getPoints(),theDataGroup, filepath);
-		FinalOutlinePoints outlinePoints = efof.computeFrontOutlineWithVanishingPoints(groupsChosen);
+		FinalOutlinePoints outlinePoints = efof.computeFrontOutline(groupsChosen);
+		
+		//Straighten the front
+		StraighteningFunction stf = new StraighteningFunction(outlinePoints, filepath, 40);
 	
 	}
 

@@ -71,9 +71,9 @@ public class ImageStraightening extends ImagePlus {
 			}
 		}
 		System.out.println("Computation is over. Pixels outside the image : "+compt);
-		result.show();
 		FileSaver fs = new FileSaver(result);
 		fs.saveAsPng("result1.png");
+		result.show();
 	}
 	
 	public int[] getStartPixel(int x, int y) {
