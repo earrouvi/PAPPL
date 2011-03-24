@@ -1,4 +1,4 @@
-zpackage OutlineComputation;
+package OutlineComputation;
 
 import ij.ImagePlus;
 import ij.process.ImageProcessor;
@@ -15,13 +15,33 @@ public class ExtractFrontOutlineFunction {
 	ImagePlus im;
 	ImageProcessor imProc;
 	
-	public ExtractFrontOutlineFunction(ArrayList<Point> outlinePoints, DataGroup[] theDataGroup){
+	/**
+	 * Constructor for computing WITH vanishing points
+	 * @param outlinePoints (the canvas you drew with the scissors)
+	 * @param theDataGroup (groups of segments and their vanishing point)
+	 */
+	public ExtractFrontOutlineFunction(ArrayList<Point> outlinePoints, DataGroup[] theDataGroup, String file){
 		this.op = outlinePoints;
 		this.dataGroup = theDataGroup;
-		this.im = new ImagePlus("Images/facade1.jpg");
+		this.im = new ImagePlus(file);
+		this.imProc = im.getProcessor();
+	}
+	
+	/**
+	 * Constructor for computing WITHOUT vanishing points
+	 * @param outlinePoints (the canvas you drew with the scissors)
+	 */
+	public ExtractFrontOutlineFunction(ArrayList<Point> outlinePoints, String file){
+		this.op = outlinePoints;
+		this.im = new ImagePlus(file);
 		this.imProc = im.getProcessor();
 	}
 
+	/**
+	 * computes corners using vanishing points
+	 * @param groupsChosen
+	 * @return FinalOutlinePoints
+	 */
 	public FinalOutlinePoints computeFrontOutlineWithVanishingPoints(ArrayList<Integer> groupsChosen){
 		FinalOutlinePoints opComputed = new FinalOutlinePoints();
 		
@@ -86,6 +106,57 @@ public class ExtractFrontOutlineFunction {
 
 		im.show();
 		return opComputed;
+	}
+	
+	/**
+	 * computes corners without using vanishing points
+	 * @return FinalOutlinePoints
+	 */
+	public FinalOutlinePoints computeFrontOutline() {
+		// inits
+		// extrema
+		int minX, minY, maxX, maxY;
+		minX = im.getWidth(); minY = im.getHeight();
+		maxX = 0; maxY = 0;
+		
+		// indices of the corner points
+		int topLeft, topRight, bottomLeft, bottomRight;
+		topLeft = 0; topRight = 0; bottomLeft = 0; bottomRight = 0;
+		
+		// output (FinalOutlinePoints is an ArrayList<Point>)
+		FinalOutlinePoints fop = new FinalOutlinePoints();
+		
+		// test on points coordinates
+		for (int i=0;i<op.size();i++) {
+			Point pt = op.get(i);
+			if (pt.x <= minX) {
+				if (pt.y <= minY) {
+					minX = pt.x;
+					minY = pt.y;
+					topLeft = i;
+				} else if (pt.y >= maxY) {
+					minX = pt.x;
+					maxY = pt.y;
+					bottomLeft = i;
+				}
+			} else if (pt.x >= maxX) {
+				if (pt.y <= minY) {
+					maxX = pt.x;
+					minY = pt.y;
+					topRight = i;
+				} else if (pt.y >= maxY) {
+					maxX = pt.x;
+					maxY = pt.y;
+					bottomRight = i;
+				}
+			}
+		}
+		
+		// we add the points counter clockwise, starting with the top-left point
+		fop.add(op.get(topLeft)); fop.add(op.get(bottomLeft));
+		fop.add(op.get(topRight)); fop.add(op.get(bottomRight));
+		
+		return fop;
 	}
 	
 	private Point getVanishingPoint(int group){

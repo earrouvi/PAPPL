@@ -4,11 +4,8 @@ import java.util.*;
 import Scissors.Scissor_Frame;
 import Scissors.algo.VerticesList;
 import Scissors.ScissorsOutlineFunction;
-import SegmentDetection.Segment;
-import SegmentDetection.SegmentDetectionFunction;
-import SegmentDetection.Utils;
-import OutlineComputation.ExtractFrontOutlineFunction;
-import OutlineComputation.FinalOutlinePoints;
+import SegmentDetection.*;
+import OutlineComputation.*;
 import fr.irstv.kmeans.*;
 
 public class MainMain {
@@ -19,11 +16,14 @@ public class MainMain {
 	 */
 	public static void main(String[] args) throws IOException {
 		
+		// change here the name of your image
 		String file = "facade1";
+
+		String filepath = "Images/"+file+".jpg";
 		
 		UsefulMethods um = new UsefulMethods();
 
-		SegmentDetectionFunction sdf = new SegmentDetectionFunction("Images/"+file+".jpg", false);
+		SegmentDetectionFunction sdf = new SegmentDetectionFunction(filepath, false);
 		RanSacFunction rsf = new RanSacFunction("XML/"+file+".xml");
 		
 		DataGroup[] theDataGroup = rsf.theDataGroup; // cleaned groups of DataPoints
@@ -40,7 +40,7 @@ public class MainMain {
 		//Gets the outline.
 		ScissorsOutlineFunction sof = new ScissorsOutlineFunction();
 
-		ExtractFrontOutlineFunction efof = new ExtractFrontOutlineFunction(sof.getVl().getPoints(),theDataGroup);
+		ExtractFrontOutlineFunction efof = new ExtractFrontOutlineFunction(sof.getVl().getPoints(),theDataGroup, filepath);
 		FinalOutlinePoints outlinePoints = efof.computeFrontOutlineWithVanishingPoints(groupsChosen);
 	
 	}
