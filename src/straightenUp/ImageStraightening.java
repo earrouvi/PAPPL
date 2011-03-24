@@ -18,9 +18,8 @@ public class ImageStraightening extends ImagePlus {
 	/**
 	 * Computes and displays the result of the homography h on the image attribute.
 	 * @param h, the homography
-	 * @param useInvertedTransform, false is quicker but the resulted image has black holes
 	 */
-	public void straightenUp(Homography h, boolean useInvertedTransform) {
+	public void straightenUp(Homography h) {
 		// inits
 		DenseMatrix homography = h.squareHomography;
 		DenseMatrix revHomography = h.reverseSquareHomography;
@@ -33,7 +32,6 @@ public class ImageStraightening extends ImagePlus {
 		
 		// real work here
 		System.out.println("Straightening up the image, please wait...");
-		int compt = 0;
 		
 		// Pixels vectors
 		DenseMatrix X = new DenseMatrix(3,1);
@@ -45,17 +43,10 @@ public class ImageStraightening extends ImagePlus {
 				// Pixels' coordinates
 				X.set(0, 0, i);
 				X.set(1, 0, j);
-				
 				// reverse side transformation
-				if(useInvertedTransform){
-					revHomography.mult(X, Y);
-					int[] pixel = getStartPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)),((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))));
-					setPixel(i, j, pixel);
-				}else{
-					homography.mult(X, Y);
-					int[] pixel = getStartPixel(i,j);
-					setPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)), ((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))), pixel);
-				}
+				revHomography.mult(X, Y);
+				int[] pixel = getStartPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)),((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))));
+				setPixel(i, j, pixel);
 			}
 		}
 		FileSaver fs = new FileSaver(result);

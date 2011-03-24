@@ -181,10 +181,10 @@ public class Utils {
 		for (Iterator<Map.Entry<Integer, Vector<Segment>>> e = map.entrySet().iterator(); e.hasNext();){
 			Map.Entry<Integer, Vector<Segment>> ent = (Map.Entry<Integer, Vector<Segment>>) e.next();
 			i.getProcessor().setColor(colorMap.get(ent.getKey()));
-			//displayVanishingPoints(i, dg[ent.getKey()].computeCentroid());
+			displayVanishingPoints(i, dg[ent.getKey()].computeCentroid());
 			for (int m=0; m<ent.getValue().size(); m++){
 				Segment s = ent.getValue().get(m);
-				i.getProcessor().drawLine(s.getStartPoint().getX(), s.getStartPoint().getY(), s.getEndPoint().getX(), s.getEndPoint().getY());
+				i.getProcessor().drawLine(s.getStartPoint().getX()+300, s.getStartPoint().getY()+100, s.getEndPoint().getX()+300, s.getEndPoint().getY()+100);
 			}
 		}
 		i.setTitle("Output segment mapping image");
@@ -213,7 +213,7 @@ public class Utils {
 	}
 	
 	public static void displayVanishingPoints(ImagePlus i, DataPoint vp) {
-		i.getProcessor().fillOval((int) vp.get(0), (int) vp.get(1), 10, 10);
+		i.getProcessor().fillOval((int) vp.get(0)*2, (int) vp.get(1)*2, 10, 10);
 	}
 
 	public static void getImageFromSegmentMap(ImagePlus image, HashMap<Integer, Vector<Segment>> map){

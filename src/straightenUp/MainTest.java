@@ -45,7 +45,7 @@ public class MainTest {
 		System.out.println(Y.get(0, 0)/Y.get(2, 0)+" "+Y.get(1, 0)/Y.get(2, 0)+" "+Y.get(2, 0));
 		
 		ImageStraightening i = new ImageStraightening(file);
-		i.straightenUp(h,false);
+		i.straightenUp(h);
 		
 	}
 

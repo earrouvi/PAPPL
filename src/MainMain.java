@@ -32,21 +32,21 @@ public class MainMain {
 		HashMap<Integer, Vector<Segment>> segmentsList = sdf.segmentsList; // list of detected segments
 		
 		HashMap<Integer, Vector<Segment>> segmentMap = um.groupBeforeDisplay(theDataGroup);
-		sdf.segmentDisplayFunction("Images/"+file+".jpg", segmentMap, theDataGroup);
+		sdf.segmentDisplayFunction("Images/"+file+"bis.jpg", segmentMap, theDataGroup);
 		
 		SegmentSelectionFrame ssf = new SegmentSelectionFrame(segmentMap);
 		while (!ssf.val) { System.out.print(""); }
 		ArrayList<Integer> groupsChosen = ssf.groupsChosen;
-		sdf.segmentDisplayFunction("Images/"+file+".jpg", segmentMap, groupsChosen);
+		sdf.segmentDisplayFunction("Images/"+file+"bis.jpg", segmentMap, groupsChosen);
 		
 		//Gets the outline.
 		ScissorsOutlineFunction sof = new ScissorsOutlineFunction();
 
 		ExtractFrontOutlineFunction efof = new ExtractFrontOutlineFunction(sof.getVl().getPoints(),theDataGroup, filepath);
-		FinalOutlinePoints outlinePoints = efof.computeFrontOutline(groupsChosen);
+		FinalOutlinePoints outlinePoints = efof.computeFrontOutline();
 		
 		//Straighten the front
-		StraighteningFunction stf = new StraighteningFunction(outlinePoints, filepath, 40);
+		StraighteningFunction stf = new StraighteningFunction(outlinePoints, filepath, 40, 0.5);
 	
 	}
 

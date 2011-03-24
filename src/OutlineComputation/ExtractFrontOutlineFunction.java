@@ -48,17 +48,16 @@ public class ExtractFrontOutlineFunction {
 	 */
 	public FinalOutlinePoints computeFrontOutlineFromVanishingPoints(ArrayList<Integer> groupsChosen){
 		if(!this.useVanishingPoints)
-			System.err.println("You cannot use this with the constructor you choosed")
+			System.err.println("You cannot use this with the constructor you choosed");
 		//inits
 		FinalOutlinePoints opComputed = new FinalOutlinePoints();
 		Point baryCenter = getBarycenter();
 		
 		// Gets the vp and computes the one corresponding to horizontal lines
 		Point vanishingPoint0 = getVanishingPoint(groupsChosen.get(0));
-		System.out.println("Vanishing point 0 x ="+vanishingPoint0.getX() + "et  y = "+vanishingPoint0.getY());
+		//System.out.println("Vanishing point 0 x ="+vanishingPoint0.getX() + "et  y = "+vanishingPoint0.getY());
 		Point vanishingPoint1 = getVanishingPoint(groupsChosen.get(1));
-		System.out.println("Vanishing point 1 x ="+vanishingPoint1.getX() + "et  y = "+vanishingPoint1.getY());
-		
+		//System.out.println("Vanishing point 1 x ="+vanishingPoint1.getX() + "et  y = "+vanishingPoint1.getY());
 		
 		if((Math.abs(vanishingPoint0.getY() - im.getHeight()/2)) > (Math.abs(vanishingPoint1.getY()) - im.getHeight()/2)){
 			opComputed.setVanishingPoint(vanishingPoint1);
@@ -130,7 +129,7 @@ public class ExtractFrontOutlineFunction {
 	 * Computes corners without using vanishing points
 	 * @return FinalOutlinePoints
 	 */
-	public FinalOutlinePoints computeFrontOutline(ArrayList<Integer> groupsChosen) {		
+	public FinalOutlinePoints computeFrontOutline() {		
 		// inits
 		double maxDis = 0;
 		int p1, p2, p3, p4;
@@ -195,7 +194,7 @@ public class ExtractFrontOutlineFunction {
 	 * Computes corners using vanishing points only for ratio
 	 * @return FinalOutlinePoints
 	 */
-	public FinalOutlinePoints computeFrontOutline() {		
+	public FinalOutlinePoints computeFrontOutline(ArrayList<Integer> groupsChosen) {		
 		// inits
 		double maxDis = 0;
 		int p1, p2, p3, p4;
@@ -250,7 +249,19 @@ public class ExtractFrontOutlineFunction {
 		
 		drawCorners(fop);
 		im.show();
+		// Gets the vp and computes the one corresponding to horizontal lines
+		Point vanishingPoint0 = getVanishingPoint(groupsChosen.get(0));
+		//System.out.println("Vanishing point 0 x ="+vanishingPoint0.getX() + "et  y = "+vanishingPoint0.getY());
+		Point vanishingPoint1 = getVanishingPoint(groupsChosen.get(1));
+		//System.out.println("Vanishing point 1 x ="+vanishingPoint1.getX() + "et  y = "+vanishingPoint1.getY());
 		
+		if((Math.abs(vanishingPoint0.getY() - im.getHeight()/2)) > (Math.abs(vanishingPoint1.getY()) - im.getHeight()/2)){
+			fop.setVanishingPoint(vanishingPoint1);
+			System.out.println("Vanishing point 1 KEPT x ="+vanishingPoint1.getX() + "et  y = "+vanishingPoint1.getY());
+		}else{
+			fop.setVanishingPoint(vanishingPoint0);
+			System.out.println("Vanishing point 0 KEPT x ="+vanishingPoint0.getX() + "et  y = "+vanishingPoint0.getY());
+		}
 		
 		return fop;
 	}
