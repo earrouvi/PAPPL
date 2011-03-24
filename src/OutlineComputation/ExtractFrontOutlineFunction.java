@@ -3,7 +3,7 @@ package OutlineComputation;
 import ij.ImagePlus;
 import ij.process.ImageProcessor;
 
-import java.awt.Point;
+import java.awt.*;
 import java.util.ArrayList;
 
 import fr.irstv.dataModel.DataPoint;
@@ -109,7 +109,6 @@ public class ExtractFrontOutlineFunction {
 		opComputed.add(getCrossOf(afvp0PtGrp1,afvp1PtGrp0));
 		System.out.println("plop4.");
 		opComputed.add(getCrossOf(afvp0PtGrp1,afvp1PtGrp1));
-		
 
 		im.show();
 		return opComputed;
@@ -201,25 +200,27 @@ public class ExtractFrontOutlineFunction {
 	 
 	public FinalOutlinePoints computeFrontOutline() {
 		// inits
-		int max = 0;
 		double maxDis = 0;
 		int p1, p2, p3, p4;
 		p1 = 0; p2 = 0; p3 = 0; p4 = 0;
+		Point center = getBarycenter();
+		
 		// output (FinalOutlinePoints is an ArrayList<Point>)
 		FinalOutlinePoints fop = new FinalOutlinePoints();
 		
-		// corner #1 is rock-bottom
+		// corner #1 is farthest point from barycenter
 		for (int i=0;i<op.size();i++) {
-			if (op.get(i).y >= max) {
-				max = op.get(i).y;
+			if (GeomComputing.distance(op.get(i),center) > maxDis) {
+				maxDis = GeomComputing.distance(op.get(i),center);
 				p1 = i;
 			}
 		}
 		fop.add(op.get(p1));
 		
+		maxDis = 0;
 		// corner #2 is farthest point from #1
 		for (int i=0;i<op.size();i++) {
-			if (op.get(i).y >= maxDis) {
+			if (GeomComputing.distance(op.get(i),fop.get(0)) >= maxDis) {
 				maxDis = GeomComputing.distance(op.get(i),fop.get(0));
 				p2 = i;
 			}
@@ -228,14 +229,27 @@ public class ExtractFrontOutlineFunction {
 		
 		// corner 3 is farthest point from [#1 #2]
 		p3 = GeomComputing.farthestPoint(op, fop.get(0), fop.get(1));
+		if (p3 == -1) {
+			p3 = GeomComputing.farthestPoint(op, fop.get(1), fop.get(0));
+		}
 		fop.add(op.get(p3));
 		
 		// corner 4 is farthest point from [#1 #3] or [#2 #3] that isn't in the triangle
 		p4 = GeomComputing.farthestPoint(op, fop.get(0), fop.get(2));
+		if (p4 == -1) {
+			p4 = GeomComputing.farthestPoint(op, fop.get(2), fop.get(0));
+		}
 		if (GeomComputing.belongsToTriangle(fop.get(0), fop.get(1), fop.get(2), op.get(p4))) {
 			p4 = GeomComputing.farthestPoint(op, fop.get(1), fop.get(2));
+			if (p4 == -1) {
+				p4 = GeomComputing.farthestPoint(op, fop.get(2), fop.get(1));
+			}
 		}
 		fop.add(op.get(p4));
+		
+		for (int i=0;i<4;i++) {
+			System.out.println("Corner #"+i+" : "+fop.get(i).x+" "+fop.get(i).y);
+		}
 		
 		drawCorners(fop);
 		im.show();
@@ -245,6 +259,7 @@ public class ExtractFrontOutlineFunction {
 	
 	public void drawCorners(FinalOutlinePoints fop) {
 		for (Point pt : fop) {
+			imProc.setColor(Color.RED);
 			imProc.fillOval(pt.x, pt.y, 6, 6);			
 		}		
 	}
