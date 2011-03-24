@@ -10,7 +10,7 @@ public class MainWithoutVP {
 	 */
 	public static void main(String[] args) {
 		
-		String file = "facade1";
+		String file = "DSCN3616";
 		
 		String filepath = "Images/"+file+".jpg";
 		

@@ -114,49 +114,52 @@ public class ExtractFrontOutlineFunction {
 	 */
 	public FinalOutlinePoints computeFrontOutline() {
 		// inits
-		// extrema
-		int minX, minY, maxX, maxY;
-		minX = im.getWidth(); minY = im.getHeight();
-		maxX = 0; maxY = 0;
-		
-		// indices of the corner points
-		int topLeft, topRight, bottomLeft, bottomRight;
-		topLeft = 0; topRight = 0; bottomLeft = 0; bottomRight = 0;
-		
+		int max = 0;
+		double maxDis = 0;
+		int p1, p2, p3, p4;
+		p1 = 0; p2 = 0; p3 = 0; p4 = 0;
 		// output (FinalOutlinePoints is an ArrayList<Point>)
 		FinalOutlinePoints fop = new FinalOutlinePoints();
 		
-		// test on points coordinates
+		// corner #1 is rock-bottom
 		for (int i=0;i<op.size();i++) {
-			Point pt = op.get(i);
-			if (pt.x <= minX) {
-				if (pt.y <= minY) {
-					minX = pt.x;
-					minY = pt.y;
-					topLeft = i;
-				} else if (pt.y >= maxY) {
-					minX = pt.x;
-					maxY = pt.y;
-					bottomLeft = i;
-				}
-			} else if (pt.x >= maxX) {
-				if (pt.y <= minY) {
-					maxX = pt.x;
-					minY = pt.y;
-					topRight = i;
-				} else if (pt.y >= maxY) {
-					maxX = pt.x;
-					maxY = pt.y;
-					bottomRight = i;
-				}
+			if (op.get(i).y >= max) {
+				max = op.get(i).y;
+				p1 = i;
 			}
 		}
+		fop.add(op.get(p1));
 		
-		// we add the points counter clockwise, starting with the top-left point
-		fop.add(op.get(topLeft)); fop.add(op.get(bottomLeft));
-		fop.add(op.get(topRight)); fop.add(op.get(bottomRight));
+		// corner #2 is farthest point from #1
+		for (int i=0;i<op.size();i++) {
+			if (op.get(i).y >= maxDis) {
+				maxDis = GeomComputing.distance(op.get(i),fop.get(0));
+				p2 = i;
+			}
+		}
+		fop.add(op.get(p2));
+		
+		// corner 3 is farthest point from [#1 #2]
+		p3 = GeomComputing.farthestPoint(op, fop.get(0), fop.get(1));
+		fop.add(op.get(p3));
+		
+		// corner 4 is farthest point from [#1 #3] or [#2 #3] that isn't in the triangle
+		p4 = GeomComputing.farthestPoint(op, fop.get(0), fop.get(2));
+		if (GeomComputing.belongsToTriangle(fop.get(0), fop.get(1), fop.get(2), op.get(p4))) {
+			p4 = GeomComputing.farthestPoint(op, fop.get(1), fop.get(2));
+		}
+		fop.add(op.get(p4));
+		
+		drawCorners(fop);
+		im.show();
 		
 		return fop;
+	}
+	
+	public void drawCorners(FinalOutlinePoints fop) {
+		for (Point pt : fop) {
+			imProc.fillOval(pt.x, pt.y, 6, 6);			
+		}		
 	}
 	
 	private Point getVanishingPoint(int group){
