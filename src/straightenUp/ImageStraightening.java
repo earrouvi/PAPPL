@@ -15,18 +15,17 @@ public class ImageStraightening extends ImagePlus {
 	public ImageStraightening(String file) {
 		super(file);
 	}
-	
-	public void straightenUp(Homography h) {
+	/**
+	 * Computes and displays the result of the homography h on the image attribute.
+	 * @param h, the homography
+	 * @param useInvertedTransform, false is quicker but the resulted image has black holes
+	 */
+	public void straightenUp(Homography h, boolean useInvertedTransform) {
 		// inits
 		DenseMatrix homography = h.squareHomography;
 		DenseMatrix revHomography = h.reverseSquareHomography;
-		int width = (int) Math.ceil(h.endPoints.get(3).getX()-h.endPoints.get(0).getX());
-		int height = (int) Math.ceil(h.endPoints.get(1).getY()-h.endPoints.get(0).getY());
-		int startX, startY, endX, endY;
-		startX = (int) Math.ceil(h.endPoints.get(0).getX());
-		startY = (int) Math.ceil(h.endPoints.get(0).getY());
-		endX = (int) Math.ceil(h.endPoints.get(2).getX());
-		endY = (int) Math.ceil(h.endPoints.get(2).getY());
+		int width = (int) Math.abs(Math.ceil(h.endPoints.get(3).getX()-h.endPoints.get(0).getX()));
+		int height = (int) Math.abs(Math.ceil(h.endPoints.get(1).getY()-h.endPoints.get(0).getY()));
 		
 		result = NewImage.createRGBImage("result", width, height, 1, NewImage.FILL_BLACK);
 		result.getProcessor().setColor(Color.WHITE);
@@ -41,36 +40,24 @@ public class ImageStraightening extends ImagePlus {
 		DenseMatrix Y = new DenseMatrix(3,1);
 		X.set(2, 0, 1);
 		
-		for (int i=startX;i<endX;i++) {
-			for (int j=startY;j<endY;j++) {
+		for (int i=0;i<width;i++) {
+			for (int j=0;j<height;j++) {
 				// Pixels' coordinates
 				X.set(0, 0, i);
 				X.set(1, 0, j);
 				
-				// right side transformation
-				/*
-				homography.mult(X, Y);
-				int[] pixel = getStartPixel(i,j);
-				setPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)), ((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))), pixel);
-				*/
-				
 				// reverse side transformation
-				//*
-				revHomography.mult(X, Y);
-				int[] pixel = getStartPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)),((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))));
-				setPixel(i, j, pixel);
-				//*
-
-				//System.out.println(Math.floor(Y.get(0, 0)/Y.get(2, 0))+" "+Math.floor(Y.get(1, 0)/Y.get(2, 0)));
-//				if (Math.floor(Y.get(1, 0)/Y.get(2, 0))>500||Math.floor(Y.get(1, 0)/Y.get(2, 0))<0) {
-//					compt++;
-//				}
-//				if (Math.floor(Y.get(0, 0)/Y.get(2, 0))>150||Math.floor(Y.get(0, 0)/Y.get(2, 0))<0) {
-//					compt++;
-//				}
+				if(useInvertedTransform){
+					revHomography.mult(X, Y);
+					int[] pixel = getStartPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)),((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))));
+					setPixel(i, j, pixel);
+				}else{
+					homography.mult(X, Y);
+					int[] pixel = getStartPixel(i,j);
+					setPixel((int) Math.floor(Y.get(0, 0)/Y.get(2, 0)), ((int) Math.floor(Y.get(1, 0)/Y.get(2, 0))), pixel);
+				}
 			}
 		}
-		System.out.println("Computation is over. Pixels outside the image : "+compt);
 		FileSaver fs = new FileSaver(result);
 		fs.saveAsPng("result1.png");
 		result.show();

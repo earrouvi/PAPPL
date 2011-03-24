@@ -109,10 +109,10 @@ public class SegmentDetectionFunction {
 		colorMap.put(1, Color.BLUE);
 		colorMap.put(2, Color.GREEN);
 		colorMap.put(3, Color.ORANGE);
-		colorMap.put(4, Color.YELLOW);
-		colorMap.put(5, Color.MAGENTA);
-		colorMap.put(6, Color.CYAN);
-		colorMap.put(7, Color.WHITE);
+		colorMap.put(4, Color.MAGENTA);
+		colorMap.put(5, Color.CYAN);
+		colorMap.put(6, Color.WHITE);
+		colorMap.put(7, Color.YELLOW);
 		
 		ImageSegment is = new ImageSegment(path);
 		ImagePlus is2 = is.baseImage;

@@ -27,22 +27,6 @@ public class MainTest {
 		groupe2.add(new Point(250,0));
 		
 		Homography h = new Homography(groupe1, groupe2);
-//		Homography hh = new Homography(groupe1, groupe2);
-//		DenseMatrix hhh = new DenseMatrix(2,2);
-//		DenseMatrix hhhh = new DenseMatrix(2,2);
-//		DenseMatrix Id = new DenseMatrix(2,2);
-//		Id.set(0, 0, 1); Id.set(1, 1, 1);
-//		for (int i=0;i<2;i++) {
-//			for (int j=0;j<2;j++) {
-//				hhhh.set(i, j, h.squareHomography.get(i, j));
-//			}
-//		}
-//		hhhh.solve(Id, hhh);
-//		for (int i=0;i<2;i++) {
-//			for (int j=0;j<2;j++) {
-//				hh.squareHomography.set(i, j, hhh.get(i, j));
-//			}
-//		}
 		
 		DenseMatrix X = new DenseMatrix(3,1);
 		DenseMatrix Xprime = new DenseMatrix(3,1);
@@ -61,7 +45,7 @@ public class MainTest {
 		System.out.println(Y.get(0, 0)/Y.get(2, 0)+" "+Y.get(1, 0)/Y.get(2, 0)+" "+Y.get(2, 0));
 		
 		ImageStraightening i = new ImageStraightening(file);
-		i.straightenUp(h);
+		i.straightenUp(h,false);
 		
 	}
 
