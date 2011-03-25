@@ -184,7 +184,7 @@ public class Utils {
 			displayVanishingPoints(i, dg[ent.getKey()].computeCentroid());
 			for (int m=0; m<ent.getValue().size(); m++){
 				Segment s = ent.getValue().get(m);
-				i.getProcessor().drawLine(s.getStartPoint().getX()+300, s.getStartPoint().getY()+100, s.getEndPoint().getX()+300, s.getEndPoint().getY()+100);
+				i.getProcessor().drawLine(s.getStartPoint().getX(), s.getStartPoint().getY(), s.getEndPoint().getX(), s.getEndPoint().getY());
 			}
 		}
 		i.setTitle("Output segment mapping image");

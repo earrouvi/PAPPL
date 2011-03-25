@@ -30,6 +30,10 @@ public class SegmentSelectionFrame extends JFrame implements ActionListener, Ite
 	protected HashMap<Integer, Vector<Segment>> segmentMap = new HashMap<Integer, Vector<Segment>>();
 	protected ArrayList<Integer> groupsChosen;
 
+	/**
+	 * Constructor - initialise the GUI to select the segments groups you want to use
+	 * @param segmentMap
+	 */
 	public SegmentSelectionFrame(HashMap<Integer, Vector<Segment>> segmentMap) {
 		super("SegmentSelectionFrame");
 
@@ -55,10 +59,10 @@ public class SegmentSelectionFrame extends JFrame implements ActionListener, Ite
 		colorMap.put(1, Color.BLUE);
 		colorMap.put(2, Color.GREEN);
 		colorMap.put(3, Color.ORANGE);
-		colorMap.put(4, Color.YELLOW);
-		colorMap.put(5, Color.MAGENTA);
-		colorMap.put(6, Color.CYAN);
-		colorMap.put(7, Color.WHITE);
+		colorMap.put(4, Color.MAGENTA);
+		colorMap.put(5, Color.CYAN);
+		colorMap.put(6, Color.WHITE);
+		colorMap.put(7, Color.YELLOW);
 
 		// global frame
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -73,7 +77,7 @@ public class SegmentSelectionFrame extends JFrame implements ActionListener, Ite
 
 		// creating the check boxes
 		for (int i=0;i<segmentMap.size();i++) {
-			createCheckBox(0, colorMap.get(i));
+			createCheckBox(i, colorMap.get(i));
 		}
 
 		// validate button

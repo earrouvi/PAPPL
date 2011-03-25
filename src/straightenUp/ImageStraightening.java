@@ -11,9 +11,11 @@ import no.uib.cipr.matrix.*;
 public class ImageStraightening extends ImagePlus {
 	
 	protected ImagePlus result;
+	String file;
 	
 	public ImageStraightening(String file) {
 		super(file);
+		this.file = file;
 	}
 	/**
 	 * Computes and displays the result of the homography h on the image attribute.
@@ -26,7 +28,7 @@ public class ImageStraightening extends ImagePlus {
 		int width = (int) Math.abs(Math.ceil(h.endPoints.get(3).getX()-h.endPoints.get(0).getX()));
 		int height = (int) Math.abs(Math.ceil(h.endPoints.get(1).getY()-h.endPoints.get(0).getY()));
 		
-		result = NewImage.createRGBImage("result", width, height, 1, NewImage.FILL_BLACK);
+		result = NewImage.createRGBImage(file+"result", width, height, 1, NewImage.FILL_BLACK);
 		result.getProcessor().setColor(Color.WHITE);
 		this.show();
 		

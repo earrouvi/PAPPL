@@ -104,7 +104,7 @@ public class Homography {
 	 * @param The input points "inputPoints" in an ArrayList<Points>
 	 * @return The sorted points in an ArrayList<Points>
 	 */
-	private ArrayList<Point> sortPoints(ArrayList<Point> inputPoints){
+	public static ArrayList<Point> sortPoints(ArrayList<Point> inputPoints){
 		ArrayList<Point> tempSortedPoints = new ArrayList<Point>();
 		ArrayList<Point> sortedPoints = new ArrayList<Point>();
 		tempSortedPoints.add(inputPoints.get(0));

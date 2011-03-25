@@ -14,7 +14,11 @@ import java.util.*;
 public class SegmentDetectionFunction {
 	
 	public HashMap<Integer, Vector<Segment>> segmentsList;
-	
+	/**
+	 * Detects the segment and computes the groups.
+	 * @param file the path to the image
+	 * @param differentColours for displaying different colour for each group
+	 */
 	public SegmentDetectionFunction(String file, boolean differentColours) {
 		String path = file;
 
@@ -29,7 +33,7 @@ public class SegmentDetectionFunction {
 		colorMap.put(6, Color.CYAN);
 		colorMap.put(7, Color.WHITE);
 
-		/** si besoin de plusieurs images à la fois */
+		/** si besoin de plusieurs images a la fois */
 		/*Vector<String> theImages = FilesFinder.findFiles(path);
 		for (int i=0; i<theImages.size(); i++){
 			System.out.println(path + theImages.get(i));
@@ -99,7 +103,12 @@ public class SegmentDetectionFunction {
 	    }
 	}
 	
-	// same method as above but without segment detection - only displaying segments
+	/**
+	 * Display ALL segments groups and their vanishing points by color
+	 * @param file
+	 * @param segmentMap
+	 * @param groupsChosen
+	 */
 	public void segmentDisplayFunction(String file, HashMap<Integer, Vector<Segment>> segmentMap, DataGroup[] dg) {
 		String path = file;
 
@@ -120,7 +129,12 @@ public class SegmentDetectionFunction {
 		Utils.getImageFromSegmentMap(is2, segmentMap, colorMap, dg);
 	}
 	
-	// same method as above but only displaying chosen segments
+	/**
+	 * Display ONLY CHOSEN segments groups and their vanishing points by color
+	 * @param file
+	 * @param segmentMap
+	 * @param groupsChosen
+	 */
 	public void segmentDisplayFunction(String file, HashMap<Integer, Vector<Segment>> segmentMap, ArrayList<Integer> groupsChosen) {
 		String path = file;
 

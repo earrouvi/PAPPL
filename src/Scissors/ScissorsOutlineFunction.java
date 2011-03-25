@@ -7,6 +7,9 @@ import ij.*;
 public class ScissorsOutlineFunction {
 
 	private VerticesList vl;
+	/**
+	 * Open the scissor selection GUI from current imageJ image.
+	 */
 	public ScissorsOutlineFunction() {
 		@SuppressWarnings("unused")
 		ImageJ imagej = new ImageJ();

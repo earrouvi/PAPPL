@@ -30,7 +30,11 @@ public class UsefulMethods {
 		return segmentMap;
 	}
 	
-	// utilise le stock de segments dans les MkDataPoints pour regrouper les segments selon leur point H
+	/**
+	 * Retrieve segments groups from the RanSac, then find their associate vanishing points and turn data into a HashMap<Integer, Vector<Segment>>
+	 * @param groups
+	 * @return segmentMap
+	 */
 	public HashMap<Integer, Vector<Segment>> groupBeforeDisplay(DataGroup[] groups) {
 		HashMap<Integer, Vector<Segment>> segmentMap = new HashMap<Integer, Vector<Segment>>();
 
